@@ -102,6 +102,8 @@ Add entries to one of these files:
 
 If an example could fit multiple categories, choose the one that best represents the direct autoresearch use case.
 
+`README.md` is the homepage aggregate, so contributors should edit category files first and then refresh the aggregate instead of treating the README as the primary source of truth.
+
 ### Quick classification rule
 
 - **Domain case**: the repo shows autoresearch being applied to a concrete field like science, trading, evaluation, genealogy, or systems optimization.

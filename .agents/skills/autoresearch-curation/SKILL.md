@@ -22,15 +22,11 @@ Read these files before making changes:
 
 - `README.md`
 - `CONTRIBUTING.md`
-- `categories/scientific-research.md`
-- `categories/software-systems-optimization.md`
-- `categories/evaluation-red-teaming.md`
-- `categories/finance-trading.md`
-- `categories/personal-knowledge-humanities.md`
-- `categories/infra-skills-forks.md`
-- `categories/related-practices-discussions.md`
+- every file under `categories/`
 
-If counts may be stale, recount entries before editing `README.md`.
+`README.md` is the homepage aggregate, not the primary editing surface.
+Update category files first, then refresh `README.md` from the current category files.
+If available, use `scripts/build-readme.py` instead of hand-editing the aggregate.
 
 ## Hard inclusion rules
 
@@ -170,7 +166,7 @@ When invoked for a recurring sweep:
 5. Attempt promotion for the strongest discussion leads.
 6. Remove duplicates.
 7. Recount category totals.
-8. Update `README.md` if totals changed.
+8. Refresh `README.md` so the homepage aggregate matches the current category files and counts.
 9. Summarize:
    - what was added
    - what was promoted
@@ -217,7 +213,7 @@ Before finishing, verify:
 - no generic agents slipped in
 - promoted items have stronger evidence than discussion-only items
 - discussions page remains useful as a map of emerging practice
-- README counts match current files if changed
+- README homepage aggregate matches the current category files
 
 ## Recommended invocation phrases
 

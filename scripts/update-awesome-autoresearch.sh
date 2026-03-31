@@ -7,6 +7,7 @@ PI_BIN="${PI_BIN:-pi}"
 REMOTE_URL="${REMOTE_URL:-https://github.com/yibie/awesome-autoresearch.git}"
 LOG_DIR="${LOG_DIR:-$REPO_ROOT/.logs}"
 PROMPT_FILE="${PROMPT_FILE:-$REPO_ROOT/scripts/prompts/periodic-curation-prompt.md}"
+README_BUILDER="${README_BUILDER:-$REPO_ROOT/scripts/build-readme.py}"
 ENV_FILE="${ENV_FILE:-$REPO_ROOT/scripts/update-awesome-autoresearch.env}"
 TIMESTAMP="$(date -u +%Y-%m-%dT%H-%M-%SZ)"
 LOG_FILE="$LOG_DIR/curation-$TIMESTAMP.log"
@@ -81,6 +82,22 @@ run_pi() {
   fail "pi not found in PATH and NODE_BIN/PI_CLI_JS fallback not configured"
 }
 
+refresh_readme() {
+  [ -f "$README_BUILDER" ] || fail "README builder not found: $README_BUILDER"
+
+  if command -v python3 >/dev/null 2>&1; then
+    python3 "$README_BUILDER"
+    return 0
+  fi
+
+  if command -v python >/dev/null 2>&1; then
+    python "$README_BUILDER"
+    return 0
+  fi
+
+  fail "python3/python not found for README rebuild"
+}
+
 commit_and_push() {
   if ! has_changes; then
     echo "[update-awesome-autoresearch] no repository changes"
@@ -107,4 +124,5 @@ commit_and_push() {
 ensure_git_repo
 sync_from_remote
 run_pi
+refresh_readme
 commit_and_push

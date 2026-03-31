@@ -4,7 +4,7 @@
 1. 严格遵守 README.md 和 CONTRIBUTING.md 的 inclusion rules
 2. 只保留直接 autoresearch 相关线索
 3. 优先补 discussions，再尝试把 strongest lead 升格为主案例
-4. 若 category totals 改变，更新 README.md counts
+4. 若 categories 有变动，刷新 README.md 首页聚合内容与 counts
 5. 保持每条 entry 只有一句话
 6. 最后输出：
    - 新增条目

@@ -4,4 +4,6 @@
 .pi/npm/
 .pi/schedule-prompts.json
 node_modules/
+__pycache__/
+*.pyc
 scripts/update-awesome-autoresearch.env
