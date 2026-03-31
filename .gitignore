@@ -1,0 +1,7 @@
+.DS_Store
+.logs/
+.pi/git/
+.pi/npm/
+.pi/schedule-prompts.json
+node_modules/
+scripts/update-awesome-autoresearch.env
