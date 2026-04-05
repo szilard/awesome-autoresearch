@@ -37,6 +37,7 @@ This page is for **discussion evidence**, not for generic AI commentary.
 - [Ali Amiri on matching Claude Code quality by optimizing prompts with AutoResearch](https://x.com/iampatten/status/2038755598981038193) - X: describes using AutoResearch to tune prompts and push a Qwen-based workflow from weak to strong performance on a large-repo task.
 - [Ren on benchmark-driven skill optimization with autoresearch](https://x.com/liliIiiI1I7/status/2038528225916424395) - X: Chinese discussion noting that autoresearch can be paired with skill creation so agents define a benchmark and then iteratively optimize the skill against it.
 - [Google hit: “I plugged a 2M-paper research index into autoresearch”](https://www.reddit.com/r/LocalLLM/comments/1s4i1y6/i_plugged_a_2mpaper_research_index_into/) - Reddit: discussion thread about augmenting autoresearch with a large paper index to improve method selection and benchmark-aware implementation choices.
+- [Aakash Gupta on porting autoresearch to prompt engineering](https://x.com/aakashgupta/status/2038132294817656978) - X: describes mapping autoresearch into a four-role prompt-optimization loop with a locked eval script, binary rubric, results log, and overnight iteration.
 
 ### Software / code workflows
 
@@ -46,10 +47,8 @@ This page is for **discussion evidence**, not for generic AI commentary.
 - [xfu on AutoResearch bug-finding persistence](https://x.com/xfubot/status/2038808623774884250) - X: short Chinese observation that autoresearch is unusually strong at repeatedly hunting hidden bugs until it finds them.
 - [Kyle Boddy on using autoresearch-claude-code to tune inference hardware parameters](https://x.com/drivelinekyle/status/2038673905368650194) - X: describes using an autoresearch Claude Code setup to tune testing inference machine parameters on 3090-based hardware.
 - [Shann Holmberg on setting up autoresearch with Claude Code](https://x.com/shannholmberg/status/2038282051225608613) - X: tutorial thread that frames autoresearch as one file, one metric, and autonomous keep/revert looping inside Claude Code.
-- [Lotte on running autoresearch against the Langfuse skill](https://x.com/lotte_verheyden/status/2037667125851213913) - X: says autoresearch still improved a production skill while surfacing an alignment-style failure mode during iterative skill optimization.
 - [Bob on autoresearch wasting 11 days on a solved benchmark](https://x.com/TimeToBuildBob/status/2039204620774314504) - X: highlights that a loop can stay mechanically healthy yet keep burning compute after metric saturation if it lacks usefulness-aware stop criteria.
 - [Doğaç on GPU-kernel autoresearch needing human nudges and repeated validation](https://x.com/dogacel0/status/2037933914879058095) - X: argues that human steering and rerunning experiments help autoresearch escape local minima and debunk noisy wins in kernel optimization.
-- [Google hit: “I generalized Karpathy's autoresearch into a skill for Claude Code”](https://www.reddit.com/r/ClaudeAI/comments/1s1qa97/i_generalized_karpathys_autoresearch_into_a_skill/) - Reddit: discussion thread describing a generalized Claude Code autoresearch skill beyond ML-specific workflows.
 - [Google hit: “Karpathy's autoresearch applied to debugging”](https://www.reddit.com/r/ClaudeAI/comments/1rvbhk3/karpathys_autoresearch_applied_to_debugging_two/) - Reddit: discussion thread about adapting the autoresearch pattern to debugging and validation-driven repair loops.
 - [Google hit: “Autoresearch with Claude on a real codebase (not ML)”](https://www.reddit.com/r/ClaudeAI/comments/1s22f7d/autoresearch_with_claude_on_a_real_codebase_not/) - Reddit: discussion thread about applying the autoresearch pattern to a production codebase rather than an ML training script.
 - [Google hit: “I used Karpathy's autoresearch pattern on product workflows”](https://www.reddit.com/r/ClaudeCode/comments/1s2e8ny/i_used_karpathys_autoresearch_pattern_on_product/) - Reddit: discussion thread suggesting the autoresearch loop is being adapted into broader product and self-improving agent workflows.
@@ -60,7 +59,6 @@ This page is for **discussion evidence**, not for generic AI commentary.
 
 ### Scientific / research augmentation
 
-- [Show HN: Autoresearch@home](https://news.ycombinator.com/item?id=47343935) - Hacker News: presents a collaborative autoresearch effort where agents share GPU resources to improve a language model through a distributed overnight loop.
 - [Makoto Tanji on Karpathy's AutoResearch](https://x.com/tan_z_tan/status/2038794997701726668) - X: explains Karpathy's autoresearch as an evolutionary search loop and highlights emerging multi-agent and parallel extensions.
 - [Duy Nguyen on Karpathy, Tobi, and generalized autoresearch loops](https://x.com/goon_nguyen/status/2038764906284294428) - X: summarizes autoresearch as edit → evaluate → keep/discard → repeat and points to its use in both GPT training and Shopify Liquid optimization.
 - [Darian Parrish on smaller autoresearch loops for non-coding tasks](https://x.com/darian_parrish/status/2038739302826529028) - X: mentions adapting the autoresearch pattern beyond coding into other task types.
@@ -71,7 +69,8 @@ This page is for **discussion evidence**, not for generic AI commentary.
 
 ### Infra / benchmarking ideas
 
-- [Show HN: Multi-agent autoresearch for ANE inference beats Apple's CoreML by 6×](https://news.ycombinator.com/item?id=47592280) - Hacker News: points to a multi-agent autoresearch system for ANE inference optimization and preserves a public discussion trail around the benchmark claim.
 - [Versur on bringing autoresearch-style loops to Grasshopper solver workflows](https://x.com/VersurAi/status/2037877185210372372) - X: describes using candidate generation, fixed benchmarks, scoring, and keep-only-if-improved loops for computational design experiments.
 - [Google hit: “Autoresearch-style framework for improving heuristics”](https://www.reddit.com/r/optimization/comments/1s3aohf/autoresearchstyle_framework_for_improving/) - Reddit: discussion thread about applying autoresearch-style benchmarked improvement loops to optimization heuristics under strict solver budgets.
 - [Google hit: HN thread on applying autoresearch to LLM inference](https://news.ycombinator.com/item?id=47538380) - Hacker News: discussion pointing to autoresearch-style ideas being adapted from model training to LLM inference optimization.
+- [AutoResearch vs Classical Hyperparameter Tuning](https://www.weco.ai/blog/autoresearch-vs-classical-hpo) - Blog: reports a NanoChat head-to-head where autoresearch beats Optuna on sample efficiency, cost-adjusted results, and longer-horizon generalization by escaping a fixed search space.
+- [Autoresearch Hub](https://news.ycombinator.com/item?id=47374572) - Hacker News: Karpathy describes an unreleased swarm design where trusted workers verify improvements from a larger untrusted pool to parallelize autoresearch with leaderboard-style proof of progress.
