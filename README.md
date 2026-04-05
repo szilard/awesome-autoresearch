@@ -42,11 +42,11 @@ We do **not** include:
 ### Primary categories
 
 - [Scientific Research](categories/scientific-research.md) — 10 entries
-- [Software / Systems Optimization](categories/software-systems-optimization.md) — 9 entries
+- [Software / Systems Optimization](categories/software-systems-optimization.md) — 11 entries
 - [Evaluation / Red Teaming](categories/evaluation-red-teaming.md) — 4 entries
 - [Finance / Trading](categories/finance-trading.md) — 6 entries
 - [Personal Knowledge / Humanities](categories/personal-knowledge-humanities.md) — 1 entry
-- [Infra / Skills / Forks](categories/infra-skills-forks.md) — 22 entries
+- [Infra / Skills / Forks](categories/infra-skills-forks.md) — 23 entries
 - [Related Practices / Discussions](categories/related-practices-discussions.md) — 37 entries
 
 ### Secondary overlap categories
@@ -90,7 +90,7 @@ Source file: [`categories/scientific-research.md`](categories/scientific-researc
 - [autoresearch-robotics](https://github.com/jellyheadandrew/autoresearch-robotics) - Robotics research: adapts Karpathy-style autoresearch to MuJoCo and Gymnasium robotics tasks by editing one training file, evaluating fixed-budget runs, and using simulator renderings plus vision feedback to keep only better policies.
 - [Tinker-Explorer](https://github.com/mohammed840/autoresearch-explorer) - Evidence-retrieval research: adapts the autoresearch pattern to GRPO document exploration, comparing reward designs and keeping only retrieval policies that answer multihop questions more accurately under a token budget.
 - [Autoresearch on an old research idea](https://ykumar.me/blog/eclip-autoresearch/) - Multimodal retrieval research: applies Claude Code autoresearch to an old eCLIP idea, running 42 fixed-budget experiments with commit/revert decisions and cutting mean rank from 344.68 to 157.43.
-- [autoresearch@home](https://ensue.dev/blog/autoresearch-at-home/) - Distributed ML research: coordinates agents that run 5-minute training experiments, publish results to shared memory, and collectively improve a language model across contributed GPUs.
+- [autoresearch-at-home](https://github.com/mutable-state-inc/autoresearch-at-home) - Distributed ML research: coordinates a SETI@home-style swarm of agents that claim experiments, share full `train.py` results through Ensue, and collectively drive down val_bpb across different GPUs.
 - [autoresearch-paper-benchmark](https://github.com/roth-andreas/autoresearch-paper-benchmark) - Graph ML research: runs paper-driven campaigns on a fixed Peptides-func benchmark by editing `train.py`, logging 300-second experiments, and testing only the best validation-AP model at campaign end.
 - [autoresearch-cifar10](https://github.com/GuillaumeErhard/autoresearch-cifar10) - Vision research: applies autoresearch to CIFAR-10 ResNet training on a 3090, iterating under fixed time budgets and keeping changes that lift accuracy beyond a 91.89% baseline.
 - [AutoResearch-GenPose](https://github.com/PeleWang/AutoResearch-GenPose) - Vision research: adapts autoresearch to CIFAR-10 UNet denoising by editing one training file, running fixed 5-minute experiments, and keeping only val_psnr improvements.
@@ -108,6 +108,8 @@ Source file: [`categories/software-systems-optimization.md`](categories/software
 - [SiliconSwarm@Ensue](https://www.ensue-network.ai/lab/ane) - Apple Silicon inference optimization: uses a multi-agent autoresearch loop to test ANE graph changes across chips and reports up to 6.31× lower median DistilBERT latency than CoreML.
 - [Rails controller tuning with Claude Code /loop autoresearch](https://zenn.dev/dely_jp/articles/3117e590465e38) - Backend performance optimization: adapts Karpathy's keep/discard loop to Rails controller latency by locking benchmark scripts and test data, running 10-minute cycles, and auto-reverting regressions.
 - [Pytest speedups via autoresearch feedback loops](https://blog.serverworks.co.jp/2026/03/30/153209) - Test performance optimization: applies autoresearch to a backend pytest suite with a fixed evaluation harness, seven autonomous experiments, and a 295s → 71s keep/discard improvement path.
+- [autoresearch-sudoku](https://github.com/Rkcr7/autoresearch-sudoku) - Solver optimization: uses an enhanced autoresearch loop to rewrite a Rust sudoku solver over 312 experiments and beat Tdoku plus rust_sudoku on 4 of 6 standard benchmark datasets.
+- [autospec](https://github.com/jeongph/autospec) - Backend service generation: applies an autoresearch-inspired keep-or-revert loop to natural-language business rules, iteratively building a Spring Boot service until Gradle and JUnit evaluation pass without regression.
 
 ### Evaluation / Red Teaming
 
@@ -161,6 +163,7 @@ Source file: [`categories/infra-skills-forks.md`](categories/infra-skills-forks.
 - [autoresearch-win-rtx](https://github.com/jsegov/autoresearch-win-rtx) - Windows GPU fork: ports Karpathy's single-file, 5-minute, val_bpb keep/discard loop to native Windows on consumer RTX GPUs.
 - [autoloop](https://github.com/armgabrielyan/autoloop) - Agent runtime: generalizes Karpathy's autoresearch into bounded repo-level loops with inferred eval commands, explicit guardrails, and keep/discard decisions across multiple coding agents.
 - [autoresearch-claude-code](https://github.com/drivelineresearch/autoresearch-claude-code) - Claude Code plugin: ports pi-autoresearch into a pure plugin skill with JSONL state, slash-command control, and autonomous keep/discard loops for arbitrary METRIC-based benchmarks.
+- [autoresearch-benchmark](https://github.com/suzuke/autoresearch-benchmark) - Benchmarking infrastructure: compares four autoresearch-style tools on the same sorting-throughput task and records both performance gains and iteration behavior under a shared setup.
 
 ### Related Practices / Discussions
 
