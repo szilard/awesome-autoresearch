@@ -41,13 +41,13 @@ We do **not** include:
 
 ### Primary categories
 
-- [Scientific Research](categories/scientific-research.md) — 12 entries
-- [Software / Systems Optimization](categories/software-systems-optimization.md) — 13 entries
+- [Scientific Research](categories/scientific-research.md) — 14 entries
+- [Software / Systems Optimization](categories/software-systems-optimization.md) — 14 entries
 - [Evaluation / Red Teaming](categories/evaluation-red-teaming.md) — 4 entries
 - [Finance / Trading](categories/finance-trading.md) — 8 entries
 - [Personal Knowledge / Humanities](categories/personal-knowledge-humanities.md) — 1 entry
 - [Infra / Skills / Forks](categories/infra-skills-forks.md) — 23 entries
-- [Related Practices / Discussions](categories/related-practices-discussions.md) — 36 entries
+- [Related Practices / Discussions](categories/related-practices-discussions.md) — 37 entries
 
 ### Secondary overlap categories
 
@@ -96,6 +96,8 @@ Source file: [`categories/scientific-research.md`](categories/scientific-researc
 - [AutoResearch-GenPose](https://github.com/PeleWang/AutoResearch-GenPose) - Vision research: adapts autoresearch to CIFAR-10 UNet denoising by editing one training file, running fixed 5-minute experiments, and keeping only val_psnr improvements.
 - [fe-autoresearch](https://github.com/ezemriv/fe-autoresearch) - Tabular ML research: applies the autoresearch loop to LightGBM feature engineering on the UCI Bank Marketing dataset by editing one `engineer_features()` target, training against fixed AUC metrics, and keeping only improvements.
 - [Paper Lantern improves Autoresearch](https://www.paperlantern.ai/blog/auto-research-case-study) - ML research augmentation: connects a 2M-paper MCP server to autoresearch, letting the agent cite 100 papers across 100 experiments and reach a 3.2% lower 2-hour validation loss than the same run without paper access.
+- [Subtractive Search in a Mature Tabular Pipeline](https://github.com/jhamandeep/autoresearch-tabular-case-study) - Tabular ML research: applies Karpathy's autoresearch to a churn-prediction XGBoost pipeline, running 116 autonomous experiments and lifting subsample AUC from 0.902892 to 0.916721 largely by removing noisy target-encoded features.
+- [autoresearch-connect4](https://github.com/alessoh/autoresearch-connect4) - Game AI research: adapts Karpathy's three-file autoresearch loop to Connect Four by editing `train.py`, training 5-minute self-play runs, and keeping only changes that improve weighted win rate against fixed opponents.
 
 ### Software / Systems Optimization
 
@@ -107,6 +109,7 @@ Source file: [`categories/software-systems-optimization.md`](categories/software
 - [autoresearch-local-llm](https://github.com/SohniSwatantra/autoresearch-local-llm) - Local ML optimization: replaces Claude Code with a local Qwen model to run the standard autoresearch keep/revert loop on a shared single GPU.
 - [Shopify Liquid performance work via autoresearch](https://simonwillison.net/2026/Mar/13/liquid/) - Software optimization: Tobi Lütke applied an autoresearch loop to Shopify's Liquid template engine, producing 93 automated commits that improved parse+render performance by 53% with 61% fewer allocations.
 - [Autoresearch for SAT Solvers](https://github.com/iliazintchenko/agent-sat) - SAT solver optimization: runs parallel MaxSAT experiments, updates reusable solver code plus expert memory, and improves public benchmark configurations against 2024 competition baselines.
+- [autoresearch — Heuristic CP Edition](https://github.com/garipovroma/autoresearch-heuristic) - Heuristic solver optimization: adapts autoresearch to C++ competitive-programming solvers by editing only `solver.cpp`, scoring fixed benchmark instances, and keeping only lower average solution costs.
 - [Autoresearch for game development](https://github.com/Centipede5/autogamestudio) - HTML5 Game Development: Runs agents to build better games based on player feedback and usage metrics, benchmarks using game ELO in 1/1 matchups.
 - [SiliconSwarm@Ensue](https://www.ensue-network.ai/lab/ane) - Apple Silicon inference optimization: uses a multi-agent autoresearch loop to test ANE graph changes across chips and reports up to 6.31× lower median DistilBERT latency than CoreML.
 - [Rails controller tuning with Claude Code /loop autoresearch](https://zenn.dev/dely_jp/articles/3117e590465e38) - Backend performance optimization: adapts Karpathy's keep/discard loop to Rails controller latency by locking benchmark scripts and test data, running 10-minute cycles, and auto-reverting regressions.
@@ -217,6 +220,7 @@ Source file: [`categories/related-practices-discussions.md`](categories/related-
 - [Duy Nguyen on Karpathy, Tobi, and generalized autoresearch loops](https://x.com/goon_nguyen/status/2038764906284294428) - X: summarizes autoresearch as edit → evaluate → keep/discard → repeat and points to its use in both GPT training and Shopify Liquid optimization.
 - [Darian Parrish on smaller autoresearch loops for non-coding tasks](https://x.com/darian_parrish/status/2038739302826529028) - X: mentions adapting the autoresearch pattern beyond coding into other task types.
 - [Ilya on adapting autoresearch to energy-demand peak prediction](https://x.com/ilyaXindy/status/2038604642121093474) - X: describes packaging a custom scorer and composite metric so Claude Code could autoresearch seasonal calibrations and threshold interactions for energy demand prediction.
+- [Google hit: “I built an autonomous ML agent that runs experiments on tabular data indefinitely”](https://www.reddit.com/r/MachineLearning/comments/1s73gma/p_i_built_an_autonomous_ml_agent_that_runs/) - Reddit: discussion thread describing a Claude Code setup that applies autoresearch loops to churn and conversion tabular tasks by iterating on features, models, and hyperparameters until gains plateau.
 - [Google hit: “Autoresearch on Qwen3.5-397B, 36 experiments...”](https://www.reddit.com/r/LocalLLaMA/comments/1s7g8ov/autoresearch_on_qwen35397b_36_experiments_to/) - Reddit: discussion thread documenting a concrete autoresearch run with experiment counts and measured throughput on Apple Silicon.
 - [Joe Harris on building the same autoresearch idea for robotics teams](https://x.com/_joe_harris_/status/2030803838501073026) - X: claims his team built an analogous loop for robotics teams to automate experiment plumbing, debugging, and iteration around harder physical-world workflows.
 - [David Gasquez on using the autoresearch idea in ML competitions](https://x.com/davidgasquez/status/2030946939836022886) - X: says the benchmark-driven autoresearch pattern worked in a couple of ML competition settings and generalizes to scored tasks like retrieval, AUC, and performance tuning.
