@@ -41,13 +41,13 @@ We do **not** include:
 
 ### Primary categories
 
-- [Scientific Research](categories/scientific-research.md) — 10 entries
-- [Software / Systems Optimization](categories/software-systems-optimization.md) — 12 entries
+- [Scientific Research](categories/scientific-research.md) — 12 entries
+- [Software / Systems Optimization](categories/software-systems-optimization.md) — 13 entries
 - [Evaluation / Red Teaming](categories/evaluation-red-teaming.md) — 4 entries
-- [Finance / Trading](categories/finance-trading.md) — 6 entries
+- [Finance / Trading](categories/finance-trading.md) — 8 entries
 - [Personal Knowledge / Humanities](categories/personal-knowledge-humanities.md) — 1 entry
 - [Infra / Skills / Forks](categories/infra-skills-forks.md) — 23 entries
-- [Related Practices / Discussions](categories/related-practices-discussions.md) — 37 entries
+- [Related Practices / Discussions](categories/related-practices-discussions.md) — 36 entries
 
 ### Secondary overlap categories
 
@@ -94,6 +94,8 @@ Source file: [`categories/scientific-research.md`](categories/scientific-researc
 - [autoresearch-paper-benchmark](https://github.com/roth-andreas/autoresearch-paper-benchmark) - Graph ML research: runs paper-driven campaigns on a fixed Peptides-func benchmark by editing `train.py`, logging 300-second experiments, and testing only the best validation-AP model at campaign end.
 - [autoresearch-cifar10](https://github.com/GuillaumeErhard/autoresearch-cifar10) - Vision research: applies autoresearch to CIFAR-10 ResNet training on a 3090, iterating under fixed time budgets and keeping changes that lift accuracy beyond a 91.89% baseline.
 - [AutoResearch-GenPose](https://github.com/PeleWang/AutoResearch-GenPose) - Vision research: adapts autoresearch to CIFAR-10 UNet denoising by editing one training file, running fixed 5-minute experiments, and keeping only val_psnr improvements.
+- [fe-autoresearch](https://github.com/ezemriv/fe-autoresearch) - Tabular ML research: applies the autoresearch loop to LightGBM feature engineering on the UCI Bank Marketing dataset by editing one `engineer_features()` target, training against fixed AUC metrics, and keeping only improvements.
+- [Paper Lantern improves Autoresearch](https://www.paperlantern.ai/blog/auto-research-case-study) - ML research augmentation: connects a 2M-paper MCP server to autoresearch, letting the agent cite 100 papers across 100 experiments and reach a 3.2% lower 2-hour validation loss than the same run without paper access.
 
 ### Software / Systems Optimization
 
@@ -105,6 +107,7 @@ Source file: [`categories/software-systems-optimization.md`](categories/software
 - [autoresearch-local-llm](https://github.com/SohniSwatantra/autoresearch-local-llm) - Local ML optimization: replaces Claude Code with a local Qwen model to run the standard autoresearch keep/revert loop on a shared single GPU.
 - [Shopify Liquid performance work via autoresearch](https://simonwillison.net/2026/Mar/13/liquid/) - Software optimization: Tobi Lütke applied an autoresearch loop to Shopify's Liquid template engine, producing 93 automated commits that improved parse+render performance by 53% with 61% fewer allocations.
 - [Autoresearch for SAT Solvers](https://github.com/iliazintchenko/agent-sat) - SAT solver optimization: runs parallel MaxSAT experiments, updates reusable solver code plus expert memory, and improves public benchmark configurations against 2024 competition baselines.
+- [Autoresearch for game development](https://github.com/Centipede5/autogamestudio) - HTML5 Game Development: Runs agents to build better games based on player feedback and usage metrics, benchmarks using game ELO in 1/1 matchups.
 - [SiliconSwarm@Ensue](https://www.ensue-network.ai/lab/ane) - Apple Silicon inference optimization: uses a multi-agent autoresearch loop to test ANE graph changes across chips and reports up to 6.31× lower median DistilBERT latency than CoreML.
 - [Rails controller tuning with Claude Code /loop autoresearch](https://zenn.dev/dely_jp/articles/3117e590465e38) - Backend performance optimization: adapts Karpathy's keep/discard loop to Rails controller latency by locking benchmark scripts and test data, running 10-minute cycles, and auto-reverting regressions.
 - [Pytest speedups via autoresearch feedback loops](https://blog.serverworks.co.jp/2026/03/30/153209) - Test performance optimization: applies autoresearch to a backend pytest suite with a fixed evaluation harness, seven autonomous experiments, and a 295s → 71s keep/discard improvement path.
@@ -131,6 +134,8 @@ Source file: [`categories/finance-trading.md`](categories/finance-trading.md)
 - [BTCautoresearch](https://github.com/CBaquero/BTCautoresearch) - Bitcoin forecasting: uses Karpathy-style autoresearch to mutate a single formula file, score walk-forward out-of-sample RMSE, and keep only forecasting rules that beat the baseline power law.
 - [autoresearch-skfolio](https://github.com/CarloNicolini/autoresearch-skfolio) - Portfolio optimization: edits a single portfolio-research script, runs fixed out-of-sample validation across multiple datasets and reversed-return variants, and keeps only Deflated Sharpe Ratio gains.
 - [autoresearch-glm](https://github.com/statcafehk/autoresearch-glm) - Credit scoring: adapts autoresearch to Taiwan credit-default prediction by editing feature-policy code and keeping only validation AUC gains in a fixed logistic-GLM benchmark.
+- [autoresearch-markets](https://github.com/JohnJBoren/autoresearch-markets) - Prediction-market trading research: adapts Karpathy's single-file keep/revert loop to Kalshi data, editing `train.py` and optimizing `val_logloss` on held-out resolved markets.
+- [Simmer Autoresearch](https://docs.simmer.markets/plugins/autoresearch) - Prediction-market trading: lets agents mutate skill configs, measure P&L or edge over live trading cycles or historical replays, and auto-commit only the configurations that improve results.
 
 ### Personal Knowledge / Humanities
 
@@ -186,7 +191,6 @@ Source file: [`categories/related-practices-discussions.md`](categories/related-
 - [Aakash Gupta on eval design as the make-or-break constraint in autoresearch](https://x.com/aakashgupta/status/2039204610569544027) - X: argues that autoresearch only transfers cleanly when the evaluator is binary, locked, compact, and specific enough to resist gaming.
 - [Ali Amiri on matching Claude Code quality by optimizing prompts with AutoResearch](https://x.com/iampatten/status/2038755598981038193) - X: describes using AutoResearch to tune prompts and push a Qwen-based workflow from weak to strong performance on a large-repo task.
 - [Ren on benchmark-driven skill optimization with autoresearch](https://x.com/liliIiiI1I7/status/2038528225916424395) - X: Chinese discussion noting that autoresearch can be paired with skill creation so agents define a benchmark and then iteratively optimize the skill against it.
-- [Google hit: “I plugged a 2M-paper research index into autoresearch”](https://www.reddit.com/r/LocalLLM/comments/1s4i1y6/i_plugged_a_2mpaper_research_index_into/) - Reddit: discussion thread about augmenting autoresearch with a large paper index to improve method selection and benchmark-aware implementation choices.
 - [Aakash Gupta on porting autoresearch to prompt engineering](https://x.com/aakashgupta/status/2038132294817656978) - X: describes mapping autoresearch into a four-role prompt-optimization loop with a locked eval script, binary rubric, results log, and overnight iteration.
 
 ### Software / code workflows

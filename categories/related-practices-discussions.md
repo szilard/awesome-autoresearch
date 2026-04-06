@@ -36,7 +36,6 @@ This page is for **discussion evidence**, not for generic AI commentary.
 - [Aakash Gupta on eval design as the make-or-break constraint in autoresearch](https://x.com/aakashgupta/status/2039204610569544027) - X: argues that autoresearch only transfers cleanly when the evaluator is binary, locked, compact, and specific enough to resist gaming.
 - [Ali Amiri on matching Claude Code quality by optimizing prompts with AutoResearch](https://x.com/iampatten/status/2038755598981038193) - X: describes using AutoResearch to tune prompts and push a Qwen-based workflow from weak to strong performance on a large-repo task.
 - [Ren on benchmark-driven skill optimization with autoresearch](https://x.com/liliIiiI1I7/status/2038528225916424395) - X: Chinese discussion noting that autoresearch can be paired with skill creation so agents define a benchmark and then iteratively optimize the skill against it.
-- [Google hit: “I plugged a 2M-paper research index into autoresearch”](https://www.reddit.com/r/LocalLLM/comments/1s4i1y6/i_plugged_a_2mpaper_research_index_into/) - Reddit: discussion thread about augmenting autoresearch with a large paper index to improve method selection and benchmark-aware implementation choices.
 - [Aakash Gupta on porting autoresearch to prompt engineering](https://x.com/aakashgupta/status/2038132294817656978) - X: describes mapping autoresearch into a four-role prompt-optimization loop with a locked eval script, binary rubric, results log, and overnight iteration.
 
 ### Software / code workflows
