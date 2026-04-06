@@ -41,13 +41,13 @@ We do **not** include:
 
 ### Primary categories
 
-- [Scientific Research](categories/scientific-research.md) — 14 entries
+- [Scientific Research](categories/scientific-research.md) — 15 entries
 - [Software / Systems Optimization](categories/software-systems-optimization.md) — 14 entries
 - [Evaluation / Red Teaming](categories/evaluation-red-teaming.md) — 4 entries
 - [Finance / Trading](categories/finance-trading.md) — 8 entries
 - [Personal Knowledge / Humanities](categories/personal-knowledge-humanities.md) — 1 entry
 - [Infra / Skills / Forks](categories/infra-skills-forks.md) — 23 entries
-- [Related Practices / Discussions](categories/related-practices-discussions.md) — 37 entries
+- [Related Practices / Discussions](categories/related-practices-discussions.md) — 38 entries
 
 ### Secondary overlap categories
 
@@ -98,6 +98,7 @@ Source file: [`categories/scientific-research.md`](categories/scientific-researc
 - [Paper Lantern improves Autoresearch](https://www.paperlantern.ai/blog/auto-research-case-study) - ML research augmentation: connects a 2M-paper MCP server to autoresearch, letting the agent cite 100 papers across 100 experiments and reach a 3.2% lower 2-hour validation loss than the same run without paper access.
 - [Subtractive Search in a Mature Tabular Pipeline](https://github.com/jhamandeep/autoresearch-tabular-case-study) - Tabular ML research: applies Karpathy's autoresearch to a churn-prediction XGBoost pipeline, running 116 autonomous experiments and lifting subsample AUC from 0.902892 to 0.916721 largely by removing noisy target-encoded features.
 - [autoresearch-connect4](https://github.com/alessoh/autoresearch-connect4) - Game AI research: adapts Karpathy's three-file autoresearch loop to Connect Four by editing `train.py`, training 5-minute self-play runs, and keeping only changes that improve weighted win rate against fixed opponents.
+- [autoresearch-tabular](https://github.com/saikatkumardey/autoresearch-tabular) - Tabular ML research: adapts Karpathy's three-file loop to the Adult Income benchmark by editing only `train.py`, running fixed 2-minute experiments, and keeping only `val_auc` improvements.
 
 ### Software / Systems Optimization
 
@@ -221,6 +222,7 @@ Source file: [`categories/related-practices-discussions.md`](categories/related-
 - [Darian Parrish on smaller autoresearch loops for non-coding tasks](https://x.com/darian_parrish/status/2038739302826529028) - X: mentions adapting the autoresearch pattern beyond coding into other task types.
 - [Ilya on adapting autoresearch to energy-demand peak prediction](https://x.com/ilyaXindy/status/2038604642121093474) - X: describes packaging a custom scorer and composite metric so Claude Code could autoresearch seasonal calibrations and threshold interactions for energy demand prediction.
 - [Google hit: “I built an autonomous ML agent that runs experiments on tabular data indefinitely”](https://www.reddit.com/r/MachineLearning/comments/1s73gma/p_i_built_an_autonomous_ml_agent_that_runs/) - Reddit: discussion thread describing a Claude Code setup that applies autoresearch loops to churn and conversion tabular tasks by iterating on features, models, and hyperparameters until gains plateau.
+- [Dan Woods on using autoresearch plus Apple's "LLM in a Flash" to run Qwen3.5-397B locally](https://x.com/danveloper/status/2033940227736100873) - X: says Claude Code used Karpathy's autoresearch setup plus Apple's "LLM in a Flash" paper to get Qwen3.5-397B running on a 48 GB M3 Max MacBook.
 - [Google hit: “Autoresearch on Qwen3.5-397B, 36 experiments...”](https://www.reddit.com/r/LocalLLaMA/comments/1s7g8ov/autoresearch_on_qwen35397b_36_experiments_to/) - Reddit: discussion thread documenting a concrete autoresearch run with experiment counts and measured throughput on Apple Silicon.
 - [Joe Harris on building the same autoresearch idea for robotics teams](https://x.com/_joe_harris_/status/2030803838501073026) - X: claims his team built an analogous loop for robotics teams to automate experiment plumbing, debugging, and iteration around harder physical-world workflows.
 - [David Gasquez on using the autoresearch idea in ML competitions](https://x.com/davidgasquez/status/2030946939836022886) - X: says the benchmark-driven autoresearch pattern worked in a couple of ML competition settings and generalizes to scored tasks like retrieval, AUC, and performance tuning.
