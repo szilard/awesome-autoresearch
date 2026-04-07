@@ -43,10 +43,10 @@ We do **not** include:
 
 - [Scientific Research](categories/scientific-research.md) — 16 entries
 - [Software / Systems Optimization](categories/software-systems-optimization.md) — 16 entries
-- [Evaluation / Red Teaming](categories/evaluation-red-teaming.md) — 5 entries
-- [Finance / Trading](categories/finance-trading.md) — 8 entries
+- [Evaluation / Red Teaming](categories/evaluation-red-teaming.md) — 6 entries
+- [Finance / Trading](categories/finance-trading.md) — 9 entries
 - [Personal Knowledge / Humanities](categories/personal-knowledge-humanities.md) — 1 entry
-- [Infra / Skills / Forks](categories/infra-skills-forks.md) — 23 entries
+- [Infra / Skills / Forks](categories/infra-skills-forks.md) — 25 entries
 - [Related Practices / Discussions](categories/related-practices-discussions.md) — 37 entries
 
 ### Secondary overlap categories
@@ -131,6 +131,7 @@ Source file: [`categories/evaluation-red-teaming.md`](categories/evaluation-red-
 - [autoresearch-prompt-optimization](https://github.com/az9713/autoresearch-prompt-optimization) - Prompt evaluation: applies the autoresearch loop to a fixed extraction benchmark, iteratively editing one prompt and keeping only accuracy gains on the eval set.
 - [We Used Autoresearch on Our AI Skill, It Taught Us to Write Better Tests](https://langfuse.com/blog/2026-03-24-optimizing-ai-skill-with-autoresearch) - AI skill evaluation: runs a prompt-migration skill against six fixed codebase test cases, scores each change on correctness, completeness, and efficiency, and keeps only improvements while cherry-picking around harness overfit.
 - [AutoPrompter](https://github.com/gauravvij/AutoPrompter) - Prompt evaluation: combines promptfoo-style metrics with autoresearch-style closed-loop iteration, generating datasets, testing target models, and refining prompts through a persistent experiment ledger.
+- [AutonomousTester](https://github.com/executeautomation/autoresearch_playwright) - UI testing evaluation: adapts autoresearch to Playwright test generation by editing only `tests/test_suite.py`, measuring `coverage_score`, and auto-fixing or discarding test changes until coverage improves.
 
 ### Finance / Trading
 
@@ -144,6 +145,7 @@ Source file: [`categories/finance-trading.md`](categories/finance-trading.md)
 - [autoresearch-glm](https://github.com/statcafehk/autoresearch-glm) - Credit scoring: adapts autoresearch to Taiwan credit-default prediction by editing feature-policy code and keeping only validation AUC gains in a fixed logistic-GLM benchmark.
 - [autoresearch-markets](https://github.com/JohnJBoren/autoresearch-markets) - Prediction-market trading research: adapts Karpathy's single-file keep/revert loop to Kalshi data, editing `train.py` and optimizing `val_logloss` on held-out resolved markets.
 - [Simmer Autoresearch](https://docs.simmer.markets/plugins/autoresearch) - Prediction-market trading: lets agents mutate skill configs, measure P&L or edge over live trading cycles or historical replays, and auto-commit only the configurations that improve results.
+- [Autonomous Trading Strategy Research](https://github.com/Junghwan-Oh/autoresearch-trading) - Crypto trading research: adapts Karpathy's single-file autoresearch loop to Hyperliquid perpetual futures, backtesting each `strategy.py` change on fixed historical data and keeping only score improvements across 103 autonomous experiments.
 
 ### Personal Knowledge / Humanities
 
@@ -178,6 +180,8 @@ Source file: [`categories/infra-skills-forks.md`](categories/infra-skills-forks.
 - [autoloop](https://github.com/armgabrielyan/autoloop) - Agent runtime: generalizes Karpathy's autoresearch into bounded repo-level loops with inferred eval commands, explicit guardrails, and keep/discard decisions across multiple coding agents.
 - [autoresearch-claude-code](https://github.com/drivelineresearch/autoresearch-claude-code) - Claude Code plugin: ports pi-autoresearch into a pure plugin skill with JSONL state, slash-command control, and autonomous keep/discard loops for arbitrary METRIC-based benchmarks.
 - [autoresearch-benchmark](https://github.com/suzuke/autoresearch-benchmark) - Benchmarking infrastructure: compares four autoresearch-style tools on the same sorting-throughput task and records both performance gains and iteration behavior under a shared setup.
+- [CORAL](https://github.com/Human-Agent-Society/CORAL) - Multi-agent autoresearch infrastructure: runs Claude Code, Codex, or OpenCode workers in isolated worktrees, grades each attempt with `coral eval`, and keeps scored improvements while sharing notes and skills across agents.
+- [autoresearch for agents](https://github.com/hwchase17/autoresearch-agents) - Agent evaluation template: adapts autoresearch to `agent.py` plus fixed `run_eval.py` and `dataset.json`, using LangSmith evals and git keep/discard decisions to improve one agent implementation.
 
 ### Related Practices / Discussions
 
