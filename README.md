@@ -41,12 +41,12 @@ We do **not** include:
 
 ### Primary categories
 
-- [Scientific Research](categories/scientific-research.md) — 16 entries
-- [Software / Systems Optimization](categories/software-systems-optimization.md) — 16 entries
+- [Scientific Research](categories/scientific-research.md) — 17 entries
+- [Software / Systems Optimization](categories/software-systems-optimization.md) — 17 entries
 - [Evaluation / Red Teaming](categories/evaluation-red-teaming.md) — 6 entries
 - [Finance / Trading](categories/finance-trading.md) — 9 entries
 - [Personal Knowledge / Humanities](categories/personal-knowledge-humanities.md) — 1 entry
-- [Infra / Skills / Forks](categories/infra-skills-forks.md) — 25 entries
+- [Infra / Skills / Forks](categories/infra-skills-forks.md) — 26 entries
 - [Related Practices / Discussions](categories/related-practices-discussions.md) — 37 entries
 
 ### Secondary overlap categories
@@ -100,6 +100,7 @@ Source file: [`categories/scientific-research.md`](categories/scientific-researc
 - [autoresearch-connect4](https://github.com/alessoh/autoresearch-connect4) - Game AI research: adapts Karpathy's three-file autoresearch loop to Connect Four by editing `train.py`, training 5-minute self-play runs, and keeping only changes that improve weighted win rate against fixed opponents.
 - [autoresearch-tabular](https://github.com/saikatkumardey/autoresearch-tabular) - Tabular ML research: adapts Karpathy's three-file loop to the Adult Income benchmark by editing only `train.py`, running fixed 2-minute experiments, and keeping only `val_auc` improvements.
 - [ocr-autoresearch](https://github.com/zhd36/ocr-autoresearch) - OCR research: adapts autoresearch to ICDAR2015 scene-text recognition by editing one `train.py`, running fixed 5-minute CRNN+CTC experiments, and keeping only lower validation character error rates.
+- [Tennis XGBoost Autoresearch](https://github.com/buildoak/tennis-xgboost-autoresearch) - Sports analytics research: applies a Karpathy-style keep/revert loop to a 245K-match tennis XGBoost pipeline, then hardens the evaluator after the agent learned to game mutable ROC-AUC scoring.
 
 ### Software / Systems Optimization
 
@@ -121,6 +122,7 @@ Source file: [`categories/software-systems-optimization.md`](categories/software
 - [autospec](https://github.com/jeongph/autospec) - Backend service generation: applies an autoresearch-inspired keep-or-revert loop to natural-language business rules, iteratively building a Spring Boot service until Gradle and JUnit evaluation pass without regression.
 - [How I used autoresearch to fix Gumroad's flaky tests in a week](https://gumroad.com/blog/p/how-i-used-autoresearch-to-fix-gumroad-s-flaky-tests-in-a-week) - Test reliability: uses OpenClaw autoresearch to run 206 commits and 94 CI cycles that fixed 13 flaky tests while surfacing a real file-ID remapping bug.
 - [WinMoE](https://github.com/idan82labs/WinMoE) - Windows inference optimization: uses an AI-driven autoresearch methodology with one-change measurements and keep-or-reject ledgers to lift Qwen3.5-397B throughput from 0.44 to 1.9 tok/s on consumer hardware.
+- [ZK Autoresearch — Plonky3 DFT Optimizer](https://github.com/Barnadrot/zk-autoresearch) - ZK prover optimization: applies Karpathy's autoresearch pattern to Plonky3's DFT code, running Rust tests plus Criterion benchmarks and keeping only commits that reduce `coset_lde_batch` time on BabyBear field workloads.
 
 ### Evaluation / Red Teaming
 
@@ -182,6 +184,7 @@ Source file: [`categories/infra-skills-forks.md`](categories/infra-skills-forks.
 - [autoresearch-benchmark](https://github.com/suzuke/autoresearch-benchmark) - Benchmarking infrastructure: compares four autoresearch-style tools on the same sorting-throughput task and records both performance gains and iteration behavior under a shared setup.
 - [CORAL](https://github.com/Human-Agent-Society/CORAL) - Multi-agent autoresearch infrastructure: runs Claude Code, Codex, or OpenCode workers in isolated worktrees, grades each attempt with `coral eval`, and keeps scored improvements while sharing notes and skills across agents.
 - [autoresearch for agents](https://github.com/hwchase17/autoresearch-agents) - Agent evaluation template: adapts autoresearch to `agent.py` plus fixed `run_eval.py` and `dataset.json`, using LangSmith evals and git keep/discard decisions to improve one agent implementation.
+- [autoresearch-automl](https://github.com/ferreirafabio/autoresearch-automl) - Benchmarking research: compares nine classical, LLM-based, and hybrid optimizers on Karpathy's nanochat task under a shared 24-hour budget, showing code-editing autoresearch is competitive but fixed-space classical HPO still wins.
 
 ### Related Practices / Discussions
 
