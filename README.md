@@ -42,12 +42,12 @@ We do **not** include:
 ### Primary categories
 
 - [Scientific Research](categories/scientific-research.md) — 20 entries
-- [Software / Systems Optimization](categories/software-systems-optimization.md) — 23 entries
-- [Evaluation / Red Teaming](categories/evaluation-red-teaming.md) — 7 entries
+- [Software / Systems Optimization](categories/software-systems-optimization.md) — 24 entries
+- [Evaluation / Red Teaming](categories/evaluation-red-teaming.md) — 8 entries
 - [Finance / Trading](categories/finance-trading.md) — 11 entries
 - [Personal Knowledge / Humanities](categories/personal-knowledge-humanities.md) — 1 entry
-- [Infra / Skills / Forks](categories/infra-skills-forks.md) — 27 entries
-- [Related Practices / Discussions](categories/related-practices-discussions.md) — 40 entries
+- [Infra / Skills / Forks](categories/infra-skills-forks.md) — 28 entries
+- [Related Practices / Discussions](categories/related-practices-discussions.md) — 41 entries
 
 ### Secondary overlap categories
 
@@ -131,6 +131,7 @@ Source file: [`categories/software-systems-optimization.md`](categories/software
 - [OpenCLI](https://github.com/jackwener/opencli) - Browser automation reliability: adds a Karpathy-style autoresearch harness to OpenCLI, cycling review → modify → commit → verify → decide against fixed V2EX, Zhihu, browser, and save-as-CLI eval suites to keep only reliability improvements.
 - [autoresearch-cublas-sam3](https://github.com/rexlee2/autoresearch-cublas-sam3) - GPU kernel optimization: applies an autoresearch loop to SAM3 GEMM tuning by mutating one config at a time, benchmarking on real GPUs, and keeping only changes that improved throughput by 2.14% over 120 experiments on an RTX 3090.
 - [autoresearch-mamba](https://github.com/continualm/autoresearch-mamba) - Mamba training optimization: adapts Karpathy's fixed-evaluator, 5-minute keep/discard loop to MLX Mamba-2, Mamba-3, and hybrid Mamba-Transformer models on Apple Silicon by mutating one training surface to lower `val_bpb`.
+- [liltrAIner](https://github.com/Snail3D/liltrAIner) - Local LLM fine-tuning optimization: applies a Karpathy-style autoresearch loop to MLX LoRA runs on Apple Silicon, letting an agent mutate training data or config, score eval prompts, and keep or revert each fine-tuning experiment.
 - [english-app](https://github.com/shitada/english-app) - Education app optimization: applies an autoresearch-inspired proposer → implement → test → evaluate → keep/discard loop to an English learning app, using pytest, TypeScript checks, and smoke tests to keep only changes scoring at least 6.0 across 10 autonomous iterations.
 
 ### Evaluation / Red Teaming
@@ -144,6 +145,7 @@ Source file: [`categories/evaluation-red-teaming.md`](categories/evaluation-red-
 - [AutoPrompter](https://github.com/gauravvij/AutoPrompter) - Prompt evaluation: combines promptfoo-style metrics with autoresearch-style closed-loop iteration, generating datasets, testing target models, and refining prompts through a persistent experiment ledger.
 - [AutonomousTester](https://github.com/executeautomation/autoresearch_playwright) - UI testing evaluation: adapts autoresearch to Playwright test generation by editing only `tests/test_suite.py`, measuring `coverage_score`, and auto-fixing or discarding test changes until coverage improves.
 - [Autoresearch for Agents from Scratch](https://github.com/rungalileo/autoresearch-for-agents) - Support-agent prompt evaluation: applies Karpathy's keep/revert loop to `system_prompt.md`, scoring frozen adversarial support cases by tool-call accuracy and lifting the prompt from 0.05 to 0.80 over 15 experiments.
+- [LLM Privacy + Cost Router — Classifier Experiment](https://github.com/clawdbotags/llm-privacy-classifier) - Privacy classification evaluation: runs a Karpathy-style autoresearch experiment across regex and prompt variants for a hybrid LLM privacy classifier, validating the best configuration at 96.7% holdout accuracy with 4.6% false negatives.
 
 ### Finance / Trading
 
@@ -198,6 +200,7 @@ Source file: [`categories/infra-skills-forks.md`](categories/infra-skills-forks.
 - [autoresearch for agents](https://github.com/hwchase17/autoresearch-agents) - Agent evaluation template: adapts autoresearch to `agent.py` plus fixed `run_eval.py` and `dataset.json`, using LangSmith evals and git keep/discard decisions to improve one agent implementation.
 - [autoresearch-automl](https://github.com/ferreirafabio/autoresearch-automl) - Benchmarking research: compares nine classical, LLM-based, and hybrid optimizers on Karpathy's nanochat task under a shared 24-hour budget, showing code-editing autoresearch is competitive but fixed-space classical HPO still wins.
 - [autoresearch-anycloud](https://github.com/abcdedf/autoresearch-anycloud) - Cloud GPU infrastructure: wraps Karpathy's autoresearch in a unified Mac and cloud runner with platform setup, budget watchdogs, result collection, and automatic teardown across AWS, GCP, Azure, and OCI.
+- [skill-autoresearch for Hermes Agent](https://github.com/domvox/hermes-skills/tree/main/skill-autoresearch) - Hermes skill: optimizes prompts, scripts, and validators through baseline → diagnose → patch → re-evaluate → keep/revert loops with dependency checks and conservative holdout rules.
 
 ### Related Practices / Discussions
 
@@ -222,6 +225,7 @@ Source file: [`categories/related-practices-discussions.md`](categories/related-
 - [Aakash Gupta on porting autoresearch to prompt engineering](https://x.com/aakashgupta/status/2038132294817656978) - X: describes mapping autoresearch into a four-role prompt-optimization loop with a locked eval script, binary rubric, results log, and overnight iteration.
 - [SonnyClawAI on adversarial second-pass evals in autoresearch](https://x.com/SonnyClawAI/status/2041657267766894777) - X: reports that a 4-hour write → eval → revise → measure loop only surfaced real failures after adding a second adversarial evaluation pass, making evaluator disagreement itself the useful signal.
 - [vincent_dalmaso on treating skills like products with autoresearch](https://x.com/vincent_dalmaso/status/2041786712834105484) - X: describes running an autoresearch-skill loop with a baseline, one change at a time, and score-based keep decisions to improve skill behavior instead of rewriting prompts blindly.
+- [0xjialin on autoresearch finding no headroom in a security-review skill](https://x.com/0xjialin/status/2041360184740917276) - X: reports adapting autoresearch into an OpenClaw and Claude Code skill to test 10 key dimensions of the SlowMist security-review skill and finding no meaningful optimization space left.
 
 ### Software / code workflows
 
