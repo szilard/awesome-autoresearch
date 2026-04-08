@@ -55,6 +55,7 @@ This page is for **discussion evidence**, not for generic AI commentary.
 - [Google hit: “I adapted Karpathy's autoresearch to build an auto-improvement loop for agentic coding skills”](https://www.reddit.com/r/ClaudeAI/comments/1s3feaa/i_adapted_karpathys_autoresearch_to_build_an/) - Reddit: discussion thread about applying the autoresearch loop to iterative improvement of coding-agent skills.
 - [vdaubry on generalizing autoresearch beyond codebases](https://x.com/vdaubry/status/2033530230011216065) - X: argues that the core autoresearch pattern can generalize from code optimization to load testing, landing page A/B tests, and infrastructure tuning when the benchmark is clear.
 - [Alex C. on turning autoresearch into a bounded debugging loop skill](https://x.com/alexcovo_eth/status/2030899247470567534) - X: describes deriving a bounded-experiment-loop skill from autoresearch and using it to improve agent debugging and code fixing.
+- [jakevin7 on an OpenCLI autoresearch framework](https://x.com/jakevin7/status/2040869645373387063) - X: describes a concrete OpenCLI loop that runs tests, makes one atomic Claude Code change, verifies or rolls back, and reports 56/59 operate tasks plus 26/26 save-as-CLI tasks across 194 deterministic evaluations.
 
 ### Scientific / research augmentation
 

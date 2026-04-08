@@ -41,13 +41,13 @@ We do **not** include:
 
 ### Primary categories
 
-- [Scientific Research](categories/scientific-research.md) — 17 entries
-- [Software / Systems Optimization](categories/software-systems-optimization.md) — 18 entries
+- [Scientific Research](categories/scientific-research.md) — 19 entries
+- [Software / Systems Optimization](categories/software-systems-optimization.md) — 19 entries
 - [Evaluation / Red Teaming](categories/evaluation-red-teaming.md) — 7 entries
 - [Finance / Trading](categories/finance-trading.md) — 9 entries
 - [Personal Knowledge / Humanities](categories/personal-knowledge-humanities.md) — 1 entry
-- [Infra / Skills / Forks](categories/infra-skills-forks.md) — 26 entries
-- [Related Practices / Discussions](categories/related-practices-discussions.md) — 37 entries
+- [Infra / Skills / Forks](categories/infra-skills-forks.md) — 27 entries
+- [Related Practices / Discussions](categories/related-practices-discussions.md) — 38 entries
 
 ### Secondary overlap categories
 
@@ -101,6 +101,8 @@ Source file: [`categories/scientific-research.md`](categories/scientific-researc
 - [autoresearch-tabular](https://github.com/saikatkumardey/autoresearch-tabular) - Tabular ML research: adapts Karpathy's three-file loop to the Adult Income benchmark by editing only `train.py`, running fixed 2-minute experiments, and keeping only `val_auc` improvements.
 - [ocr-autoresearch](https://github.com/zhd36/ocr-autoresearch) - OCR research: adapts autoresearch to ICDAR2015 scene-text recognition by editing one `train.py`, running fixed 5-minute CRNN+CTC experiments, and keeping only lower validation character error rates.
 - [Tennis XGBoost Autoresearch](https://github.com/buildoak/tennis-xgboost-autoresearch) - Sports analytics research: applies a Karpathy-style keep/revert loop to a 245K-match tennis XGBoost pipeline, then hardens the evaluator after the agent learned to game mutable ROC-AUC scoring.
+- [Bio-Autoresearch](https://github.com/monk1337/Bio-Autoresearch) - Drug discovery research: applies a Karpathy-style autoresearch loop to rare-disease drug repurposing on PrimeKG, running 15 GPU experiments with keep/revert decisions and lifting held-out per-disease AUPRC from 0.284 to 0.761.
+- [autoresearch-quantum](https://github.com/saymrwulf/autoresearch-quantum) - Quantum research: runs incumbent/challenger autoresearch ratchets for encoded magic-state experiments, screens candidates on cheap noisy simulations, and promotes only justified challengers to expensive backends while logging transferable lessons.
 
 ### Software / Systems Optimization
 
@@ -124,6 +126,7 @@ Source file: [`categories/software-systems-optimization.md`](categories/software
 - [WinMoE](https://github.com/idan82labs/WinMoE) - Windows inference optimization: uses an AI-driven autoresearch methodology with one-change measurements and keep-or-reject ledgers to lift Qwen3.5-397B throughput from 0.44 to 1.9 tok/s on consumer hardware.
 - [ZK Autoresearch — Plonky3 DFT Optimizer](https://github.com/Barnadrot/zk-autoresearch) - ZK prover optimization: applies Karpathy's autoresearch pattern to Plonky3's DFT code, running Rust tests plus Criterion benchmarks and keeping only commits that reduce `coset_lde_batch` time on BabyBear field workloads.
 - [autoresearch-go-ane](https://github.com/tmc/autoresearch-go-ane) - Apple Silicon training optimization: ports Karpathy's loop to a Go plus ANE LLM trainer, benchmarking fixed 5-minute TinyStories runs with `benchstat` and keeping only lower `val_loss` configurations.
+- [openroad-autoresearch-ibex](https://github.com/maxjohannn/openroad-autoresearch-ibex) - Chip design optimization: applies a fixed-harness autoresearch loop to OpenROAD RTL-to-GDSII experiments on the IBEX CPU, using scout-promote screening and objective-aware history to keep only timing, area, or power improvements.
 
 ### Evaluation / Red Teaming
 
@@ -187,6 +190,7 @@ Source file: [`categories/infra-skills-forks.md`](categories/infra-skills-forks.
 - [CORAL](https://github.com/Human-Agent-Society/CORAL) - Multi-agent autoresearch infrastructure: runs Claude Code, Codex, or OpenCode workers in isolated worktrees, grades each attempt with `coral eval`, and keeps scored improvements while sharing notes and skills across agents.
 - [autoresearch for agents](https://github.com/hwchase17/autoresearch-agents) - Agent evaluation template: adapts autoresearch to `agent.py` plus fixed `run_eval.py` and `dataset.json`, using LangSmith evals and git keep/discard decisions to improve one agent implementation.
 - [autoresearch-automl](https://github.com/ferreirafabio/autoresearch-automl) - Benchmarking research: compares nine classical, LLM-based, and hybrid optimizers on Karpathy's nanochat task under a shared 24-hour budget, showing code-editing autoresearch is competitive but fixed-space classical HPO still wins.
+- [autoresearch-anycloud](https://github.com/abcdedf/autoresearch-anycloud) - Cloud GPU infrastructure: wraps Karpathy's autoresearch in a unified Mac and cloud runner with platform setup, budget watchdogs, result collection, and automatic teardown across AWS, GCP, Azure, and OCI.
 
 ### Related Practices / Discussions
 
@@ -227,6 +231,7 @@ Source file: [`categories/related-practices-discussions.md`](categories/related-
 - [Google hit: “I adapted Karpathy's autoresearch to build an auto-improvement loop for agentic coding skills”](https://www.reddit.com/r/ClaudeAI/comments/1s3feaa/i_adapted_karpathys_autoresearch_to_build_an/) - Reddit: discussion thread about applying the autoresearch loop to iterative improvement of coding-agent skills.
 - [vdaubry on generalizing autoresearch beyond codebases](https://x.com/vdaubry/status/2033530230011216065) - X: argues that the core autoresearch pattern can generalize from code optimization to load testing, landing page A/B tests, and infrastructure tuning when the benchmark is clear.
 - [Alex C. on turning autoresearch into a bounded debugging loop skill](https://x.com/alexcovo_eth/status/2030899247470567534) - X: describes deriving a bounded-experiment-loop skill from autoresearch and using it to improve agent debugging and code fixing.
+- [jakevin7 on an OpenCLI autoresearch framework](https://x.com/jakevin7/status/2040869645373387063) - X: describes a concrete OpenCLI loop that runs tests, makes one atomic Claude Code change, verifies or rolls back, and reports 56/59 operate tasks plus 26/26 save-as-CLI tasks across 194 deterministic evaluations.
 
 ### Scientific / research augmentation
 
