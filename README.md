@@ -41,7 +41,7 @@ We do **not** include:
 
 ### Primary categories
 
-- [Scientific Research](categories/scientific-research.md) — 22 entries
+- [Scientific Research](categories/scientific-research.md) — 23 entries
 - [Software / Systems Optimization](categories/software-systems-optimization.md) — 25 entries
 - [Evaluation / Red Teaming](categories/evaluation-red-teaming.md) — 8 entries
 - [Finance / Trading](categories/finance-trading.md) — 11 entries
@@ -96,6 +96,7 @@ Source file: [`categories/scientific-research.md`](categories/scientific-researc
 - [AutoResearch-GenPose](https://github.com/PeleWang/AutoResearch-GenPose) - Vision research: adapts autoresearch to CIFAR-10 UNet denoising by editing one training file, running fixed 5-minute experiments, and keeping only val_psnr improvements.
 - [MLP-AutoResearch](https://github.com/HuangShengZeBlueSky/MLP_AutoResearch) - MNIST training research: ports Karpathy's single-file loop to an MLP classifier, fixing 20-epoch runs and greedy keep/revert decisions that raised handwritten-digit accuracy from 0.9809 to 0.9836.
 - [autoresearch-medimage](https://github.com/mattlungrenmd/autoresearch-medimage) - Medical imaging research: adapts Karpathy's `prepare.py` + `train.py` + `results.tsv` loop to 2D imaging tasks, using short-budget candidate discovery and staged follow-up validation to surface stronger ChestXray14 models.
+- [autocircuit](https://github.com/qelloman/autocircuit) - Analog circuit optimization: adapts Karpathy's autoresearch to a SKY130 two-stage op-amp, editing `optimize.py`, running ngspice, and keeping only parameter changes that expand the GBW-versus-power Pareto front under phase-margin constraints.
 - [fe-autoresearch](https://github.com/ezemriv/fe-autoresearch) - Tabular ML research: applies the autoresearch loop to LightGBM feature engineering on the UCI Bank Marketing dataset by editing one `engineer_features()` target, training against fixed AUC metrics, and keeping only improvements.
 - [Paper Lantern improves Autoresearch](https://www.paperlantern.ai/blog/auto-research-case-study) - ML research augmentation: connects a 2M-paper MCP server to autoresearch, letting the agent cite 100 papers across 100 experiments and reach a 3.2% lower 2-hour validation loss than the same run without paper access.
 - [Subtractive Search in a Mature Tabular Pipeline](https://github.com/jhamandeep/autoresearch-tabular-case-study) - Tabular ML research: applies Karpathy's autoresearch to a churn-prediction XGBoost pipeline, running 116 autonomous experiments and lifting subsample AUC from 0.902892 to 0.916721 largely by removing noisy target-encoded features.
