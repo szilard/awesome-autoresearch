@@ -44,9 +44,9 @@ We do **not** include:
 - [Scientific Research](categories/scientific-research.md) — 23 entries
 - [Software / Systems Optimization](categories/software-systems-optimization.md) — 25 entries
 - [Evaluation / Red Teaming](categories/evaluation-red-teaming.md) — 8 entries
-- [Finance / Trading](categories/finance-trading.md) — 11 entries
+- [Finance / Trading](categories/finance-trading.md) — 12 entries
 - [Personal Knowledge / Humanities](categories/personal-knowledge-humanities.md) — 1 entry
-- [Infra / Skills / Forks](categories/infra-skills-forks.md) — 39 entries
+- [Infra / Skills / Forks](categories/infra-skills-forks.md) — 40 entries
 - [Related Practices / Discussions](categories/related-practices-discussions.md) — 45 entries
 
 ### Secondary overlap categories
@@ -166,6 +166,7 @@ Source file: [`categories/finance-trading.md`](categories/finance-trading.md)
 - [Autonomous Trading Strategy Research](https://github.com/Junghwan-Oh/autoresearch-trading) - Crypto trading research: adapts Karpathy's single-file autoresearch loop to Hyperliquid perpetual futures, backtesting each `strategy.py` change on fixed historical data and keeping only score improvements across 103 autonomous experiments.
 - [PolyEdge AutoResearch](https://github.com/muze-ai-consulting/polyedge-autoresearch) - Prediction-market arbitrage: applies a Karpathy-style keep/discard loop to Polymarket Up/Down paper trading, mutating one strategy parameter at a time and scoring each multi-window run on P&L, fill rate, and trading frequency.
 - [AutoResearch — Autonomous DEX Strategy Discovery](https://github.com/darks0l/autoresearch) - DEX trading research: applies Karpathy-style autoresearch to Base DEX strategies, backtesting one mutation at a time against real Uniswap V3 and Aerodrome data and lifting composite score from 0.421 to 8.176 over 230+ experiments.
+- [Winning the Paradigm Prediction Market Challenge with Claude Code](https://github.com/ryanli-me/paradigm-pm-challenge) - Prediction-market market making: uses parallel Claude Code agents as an autoresearch swarm to generate 1,039 strategy variants, run 2,000+ evaluations, and optimize mean edge to a first-place finish in Paradigm's challenge.
 
 ### Personal Knowledge / Humanities
 
@@ -202,6 +203,7 @@ Source file: [`categories/infra-skills-forks.md`](categories/infra-skills-forks.
 - [autoresearch-win-rtx](https://github.com/jsegov/autoresearch-win-rtx) - Windows GPU fork: ports Karpathy's single-file, 5-minute, val_bpb keep/discard loop to native Windows on consumer RTX GPUs.
 - [autoresearch-amd](https://github.com/johnmcmullan/autoresearch-amd) - AMD GPU fork: ports Karpathy's single-file, 5-minute val_bpb keep/discard loop to ROCm by replacing Flash Attention 3 with portable SDPA for RDNA 4 cards.
 - [autoloop](https://github.com/armgabrielyan/autoloop) - Agent runtime: generalizes Karpathy's autoresearch into bounded repo-level loops with inferred eval commands, explicit guardrails, and keep/discard decisions across multiple coding agents.
+- [GOAL.md](https://github.com/jmilinovich/goal-md) - Goal-spec framework: generalizes Karpathy's autoresearch to repos without native scalar metrics by constructing a project-specific fitness function in `GOAL.md`, then running measure → act → verify → keep/revert loops against it.
 - [autoresearch-claude-code](https://github.com/drivelineresearch/autoresearch-claude-code) - Claude Code plugin: ports pi-autoresearch into a pure plugin skill with JSONL state, slash-command control, and autonomous keep/discard loops for arbitrary METRIC-based benchmarks.
 - [autoresearch-benchmark](https://github.com/suzuke/autoresearch-benchmark) - Benchmarking infrastructure: compares four autoresearch-style tools on the same sorting-throughput task and records both performance gains and iteration behavior under a shared setup.
 - [CORAL](https://github.com/Human-Agent-Society/CORAL) - Multi-agent autoresearch infrastructure: runs Claude Code, Codex, or OpenCode workers in isolated worktrees, grades each attempt with `coral eval`, and keeps scored improvements while sharing notes and skills across agents.
