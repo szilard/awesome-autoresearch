@@ -53,7 +53,7 @@ We do **not** include:
 
 - [Knowledge Base / RAG Preparation](categories/knowledge-base-rag-preparation.md) — 2 entries
 - [Market Research](categories/market-research.md) — 1 entry
-- [Workflow Automation](categories/workflow-automation.md) — 5 entries
+- [Workflow Automation](categories/workflow-automation.md) — 6 entries
 
 ### Open categories still being tracked
 
@@ -316,6 +316,7 @@ Source file: [`categories/workflow-automation.md`](categories/workflow-automatio
 - [AutoKernel](https://github.com/RightNow-AI/autokernel) - GPU optimization: applies Karpathy-style autoresearch to kernel bottlenecks, iterating on code, benchmarking, and keeping only changes that improve speed without breaking correctness.
 - [autovoiceevals](https://github.com/ArchishmanSengupta/autovoiceevals) - Voice AI evaluation: attacks voice agents with adversarial callers, proposes prompt changes one at a time, and keeps or reverts them based on eval results.
 - [PM document optimizer](https://github.com/lifang-mban/pm-document-optimizer) - Product workflow automation: applies a Karpathy-style git ratchet to markdown artifacts like PRDs and strategy docs, scoring each draft with programmatic checks and committing only higher-scoring revisions.
+- [Trip Optimizer Pro](https://github.com/michaelpersonal/trip-optimizer) - Travel planning workflow automation: applies the autoresearch pattern to itinerary generation by researching destinations, scoring multi-day plans, and keeping only itinerary mutations that improve a weighted travel-quality score.
 
 ## Submission format
 
