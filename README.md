@@ -43,7 +43,7 @@ We do **not** include:
 
 - [Scientific Research](categories/scientific-research.md) — 24 entries
 - [Software / Systems Optimization](categories/software-systems-optimization.md) — 32 entries
-- [Evaluation / Red Teaming](categories/evaluation-red-teaming.md) — 10 entries
+- [Evaluation / Red Teaming](categories/evaluation-red-teaming.md) — 11 entries
 - [Finance / Trading](categories/finance-trading.md) — 15 entries
 - [Personal Knowledge / Humanities](categories/personal-knowledge-humanities.md) — 2 entries
 - [Infra / Skills / Forks](categories/infra-skills-forks.md) — 46 entries
@@ -160,6 +160,7 @@ Source file: [`categories/evaluation-red-teaming.md`](categories/evaluation-red-
 - [LLM Privacy + Cost Router — Classifier Experiment](https://github.com/clawdbotags/llm-privacy-classifier) - Privacy classification evaluation: runs a Karpathy-style autoresearch experiment across regex and prompt variants for a hybrid LLM privacy classifier, validating the best configuration at 96.7% holdout accuracy with 4.6% false negatives.
 - [AutoMemory](https://github.com/Shelter41/automemory) - Agent memory evaluation: lets an agent rewrite its own memory system against LongMemEval, using an immutable evaluator over random question samples and iterating on code plus strategy notes in response to scored failures.
 - [How to stop your autoresearch loop from cheating](https://www.cerebras.ai/blog/how-to-stop-your-autoresearch-loop-from-cheating) - Autoresearch evaluation hardening: reports 71 experiments across nanochat training and MoE compression, showing loops drift quickly unless experiments are isolated and evaluator gates block shortcut gains.
+- [Autoreason](https://github.com/NousResearch/autoreason) - Output evaluation: extends Karpathy-style autoresearch to subjective writing and coding tasks by running incumbent-versus-revision-versus-synthesis tournaments under blind multi-judge Borda scoring and stopping only when the unchanged version wins twice, outperforming standard self-refinement baselines on writing tasks and 150 CodeContests problems.
 
 ### Finance / Trading
 
@@ -268,7 +269,6 @@ Source file: [`categories/related-practices-discussions.md`](categories/related-
 - [Ren on benchmark-driven skill optimization with autoresearch](https://x.com/liliIiiI1I7/status/2038528225916424395) - X: Chinese discussion noting that autoresearch can be paired with skill creation so agents define a benchmark and then iteratively optimize the skill against it.
 - [Aakash Gupta on porting autoresearch to prompt engineering](https://x.com/aakashgupta/status/2038132294817656978) - X: describes mapping autoresearch into a four-role prompt-optimization loop with a locked eval script, binary rubric, results log, and overnight iteration.
 - [SonnyClawAI on adversarial second-pass evals in autoresearch](https://x.com/SonnyClawAI/status/2041657267766894777) - X: reports that a 4-hour write → eval → revise → measure loop only surfaced real failures after adding a second adversarial evaluation pass, making evaluator disagreement itself the useful signal.
-- [SHL0MS on Autoreason extending autoresearch to subjective domains](https://x.com/SHL0MS/status/2043415274196435325) - X: introduces a blind-judge loop where the incumbent, an adversarial revision, and a synthesis compete until "do nothing" wins twice, extending autoresearch-style keep-or-stop control to writing and policy tasks.
 - [jcyhc_ai on citation hallucinations slipping through the Autoreason evaluator stack](https://x.com/jcyhc_ai/status/2043449643170988484) - X: shows that nine passes of critics and judges still missed fabricated references in the Autoreason paper, highlighting evaluator blind spots in autoresearch-style research-writing loops.
 - [Barna on benchmark-coupled correctness gates for zk-autoresearch](https://x.com/realbarnakiss/status/2039725945003585754) - X: reports adding a benchmark-scale bitwise validator and nondeterminism detection because small upstream tests missed bugs that only appeared at the exact workload being optimized.
 - [vincent_dalmaso on treating skills like products with autoresearch](https://x.com/vincent_dalmaso/status/2041786712834105484) - X: describes running an autoresearch-skill loop with a baseline, one change at a time, and score-based keep decisions to improve skill behavior instead of rewriting prompts blindly.
@@ -297,6 +297,7 @@ Source file: [`categories/related-practices-discussions.md`](categories/related-
 - [kavindpadi on using pi-autoresearch for SQL optimization](https://x.com/kavindpadi/status/2041727544530235899) - X: describes trying pi-autoresearch on intentionally inefficient BigQuery SQL and suggests the same metric-driven loop can target top-cost warehouse queries under platform-specific pricing constraints.
 - [Kr1sso on turning Instruments into a teammate for autoresearch](https://x.com/Kr1sso/status/2043272598759354839) - X: describes turning macOS Instruments into an LLM-ready profiling CLI so autoresearch loops can test CPU, Metal GPU, and memory hypotheses and keep or discard optimizations from trace data.
 - [Darrell Thomas on an RTX 5090 CUDA kernel factory inspired by autoresearch](https://x.com/DarrellTho39662/status/2042821346736955721) - X: reports an AI loop that runs Nsight Compute, tunes kernels, and keeps or discards 39 CUDA variants, with DSYRK reaching 2.19× cuBLAS and quantum simulation running 2-5× faster than cuQuantum.
+- [abhijitmjj on a 13-hour autoresearch loop for a LaTeX scanner](https://x.com/abhijitmjj/status/2043723338359636117) - X: reports using Karpathy's keep/revert loop on a Markdown-to-LaTeX scanner, growing a 59-fixture corpus across 29 iterations to lift F1 from 0.896 to 1.0 while cutting real-world false positives by 78%.
 
 ### Scientific / research augmentation
 
