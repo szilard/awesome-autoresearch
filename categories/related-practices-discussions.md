@@ -26,6 +26,7 @@ This page is for **discussion evidence**, not for generic AI commentary.
 - [0xAggelos on overnight autoresearch across multiple exchanges](https://x.com/0xAggelos/status/2035762307196666153) - X: claims to apply Karpathy's autoresearch pattern to trading strategy research across exchanges and symbols with thousands of experiments and no manual tuning.
 - [alex on verifier-driven autoresearch loops for Amazon seller workflows](https://x.com/nospicyplease_/status/2035682307483259073) - X: argues that verifier-driven autoresearch loops fit PPC, catalog, and ASIN-level decisions better than peer-consensus swarms because proposals are kept only when the evaluator approves them.
 - [Brandon Pizzacalla on agentic paid ads systems based on Karpathy autoresearch](https://x.com/bpizzacalla/status/2038731009051824318) - X: claims to use Karpathy-style autoresearch as the planning and experiment pattern behind autonomous paid-ads workflows.
+- [nlethetech on a NEPSE quant terminal refined through 300+ autoresearch cycles](https://x.com/nlethetech/status/2043522907779862610) - X: says his NEPSE terminal trading workstation backtests strategies with a quant model refined through 300+ autoresearch cycles while combining market data and execution in one interface.
 
 ### Business / GTM workflows
 

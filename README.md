@@ -44,10 +44,10 @@ We do **not** include:
 - [Scientific Research](categories/scientific-research.md) — 24 entries
 - [Software / Systems Optimization](categories/software-systems-optimization.md) — 31 entries
 - [Evaluation / Red Teaming](categories/evaluation-red-teaming.md) — 10 entries
-- [Finance / Trading](categories/finance-trading.md) — 12 entries
+- [Finance / Trading](categories/finance-trading.md) — 14 entries
 - [Personal Knowledge / Humanities](categories/personal-knowledge-humanities.md) — 1 entry
 - [Infra / Skills / Forks](categories/infra-skills-forks.md) — 42 entries
-- [Related Practices / Discussions](categories/related-practices-discussions.md) — 48 entries
+- [Related Practices / Discussions](categories/related-practices-discussions.md) — 49 entries
 
 ### Secondary overlap categories
 
@@ -176,6 +176,8 @@ Source file: [`categories/finance-trading.md`](categories/finance-trading.md)
 - [PolyEdge AutoResearch](https://github.com/muze-ai-consulting/polyedge-autoresearch) - Prediction-market arbitrage: applies a Karpathy-style keep/discard loop to Polymarket Up/Down paper trading, mutating one strategy parameter at a time and scoring each multi-window run on P&L, fill rate, and trading frequency.
 - [AutoResearch — Autonomous DEX Strategy Discovery](https://github.com/darks0l/autoresearch) - DEX trading research: applies Karpathy-style autoresearch to Base DEX strategies, backtesting one mutation at a time against real Uniswap V3 and Aerodrome data and lifting composite score from 0.421 to 8.176 over 230+ experiments.
 - [Winning the Paradigm Prediction Market Challenge with Claude Code](https://github.com/ryanli-me/paradigm-pm-challenge) - Prediction-market market making: uses parallel Claude Code agents as an autoresearch swarm to generate 1,039 strategy variants, run 2,000+ evaluations, and optimize mean edge to a first-place finish in Paradigm's challenge.
+- [Autoresearch Trading Strategy Optimizer](https://github.com/VictorFouquet/AutoresearchTrading) - Crypto trading research: applies Karpathy's autoresearch to one editable `strategy.py`, hill-climbing on deterministic historical backtests and keeping only commits that improve `final_portfolio_value / max_drawdown`.
+- [Investing Autoresearch](https://github.com/Dvrki/investing-autoresearch) - Trading strategy research: uses an autonomous Claude loop to rewrite `strategy.py`, backtest on held-out market data, and keep only strategies that improve out-of-sample Sharpe under walk-forward, slippage, and fee validation.
 
 ### Personal Knowledge / Humanities
 
@@ -240,6 +242,7 @@ Source file: [`categories/related-practices-discussions.md`](categories/related-
 - [0xAggelos on overnight autoresearch across multiple exchanges](https://x.com/0xAggelos/status/2035762307196666153) - X: claims to apply Karpathy's autoresearch pattern to trading strategy research across exchanges and symbols with thousands of experiments and no manual tuning.
 - [alex on verifier-driven autoresearch loops for Amazon seller workflows](https://x.com/nospicyplease_/status/2035682307483259073) - X: argues that verifier-driven autoresearch loops fit PPC, catalog, and ASIN-level decisions better than peer-consensus swarms because proposals are kept only when the evaluator approves them.
 - [Brandon Pizzacalla on agentic paid ads systems based on Karpathy autoresearch](https://x.com/bpizzacalla/status/2038731009051824318) - X: claims to use Karpathy-style autoresearch as the planning and experiment pattern behind autonomous paid-ads workflows.
+- [nlethetech on a NEPSE quant terminal refined through 300+ autoresearch cycles](https://x.com/nlethetech/status/2043522907779862610) - X: says his NEPSE terminal trading workstation backtests strategies with a quant model refined through 300+ autoresearch cycles while combining market data and execution in one interface.
 
 ### Business / GTM workflows
 
