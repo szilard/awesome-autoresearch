@@ -32,6 +32,10 @@ This page is for **discussion evidence**, not for generic AI commentary.
 
 - [Brandon Pizzacalla on applying Karpathy's autoresearch pattern to cold email](https://x.com/bpizzacalla/status/2039233818994102609) - X: describes a single-agent loop that tests cold-email variants on live reply-rate metrics, commits winners as the new baseline, and stops at convergence.
 
+### Workflow automation / consumer ops
+
+- [agrim singh on applying autoresearch to business-class fare search](https://x.com/agrimsingh/status/2041916589906464820) - X: describes an `autofare` loop that proposed 52 alternate routings and date shifts, validated visa and layover rules from YAML, and kept only cheaper legal itineraries, cutting one quoted business-class trip from $4,716 to $2,424 in 16 iterations.
+
 ### Prompt / evaluation
 
 - [Aakash Gupta on eval design as the make-or-break constraint in autoresearch](https://x.com/aakashgupta/status/2039204610569544027) - X: argues that autoresearch only transfers cleanly when the evaluator is binary, locked, compact, and specific enough to resist gaming.

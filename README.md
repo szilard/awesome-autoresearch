@@ -44,10 +44,10 @@ We do **not** include:
 - [Scientific Research](categories/scientific-research.md) — 24 entries
 - [Software / Systems Optimization](categories/software-systems-optimization.md) — 32 entries
 - [Evaluation / Red Teaming](categories/evaluation-red-teaming.md) — 10 entries
-- [Finance / Trading](categories/finance-trading.md) — 14 entries
+- [Finance / Trading](categories/finance-trading.md) — 15 entries
 - [Personal Knowledge / Humanities](categories/personal-knowledge-humanities.md) — 2 entries
-- [Infra / Skills / Forks](categories/infra-skills-forks.md) — 45 entries
-- [Related Practices / Discussions](categories/related-practices-discussions.md) — 53 entries
+- [Infra / Skills / Forks](categories/infra-skills-forks.md) — 46 entries
+- [Related Practices / Discussions](categories/related-practices-discussions.md) — 54 entries
 
 ### Secondary overlap categories
 
@@ -179,6 +179,7 @@ Source file: [`categories/finance-trading.md`](categories/finance-trading.md)
 - [Winning the Paradigm Prediction Market Challenge with Claude Code](https://github.com/ryanli-me/paradigm-pm-challenge) - Prediction-market market making: uses parallel Claude Code agents as an autoresearch swarm to generate 1,039 strategy variants, run 2,000+ evaluations, and optimize mean edge to a first-place finish in Paradigm's challenge.
 - [Autoresearch Trading Strategy Optimizer](https://github.com/VictorFouquet/AutoresearchTrading) - Crypto trading research: applies Karpathy's autoresearch to one editable `strategy.py`, hill-climbing on deterministic historical backtests and keeping only commits that improve `final_portfolio_value / max_drawdown`.
 - [Investing Autoresearch](https://github.com/Dvrki/investing-autoresearch) - Trading strategy research: uses an autonomous Claude loop to rewrite `strategy.py`, backtest on held-out market data, and keep only strategies that improve out-of-sample Sharpe under walk-forward, slippage, and fee validation.
+- [EMA Crossover Autoresearch](https://github.com/marketcalls/emacrossover-autoresearch) - Equity trading research: adapts Karpathy's three-file autoresearch loop to an SBIN EMA strategy, mutating only `strategy.py`, backtesting a fixed 10-year Indian equities dataset, and keeping only changes that improve a composite return, Sharpe, and drawdown score.
 
 ### Personal Knowledge / Humanities
 
@@ -236,6 +237,7 @@ Source file: [`categories/infra-skills-forks.md`](categories/infra-skills-forks.
 - [codex-autoresearcher](https://github.com/aelaguiz/codex-autoresearcher) - Codex experiment infrastructure: runs optimization campaigns through separate worker and judge Codex processes, a static `evaluate.sh`, and schema-validated keep or restore verdicts with durable attempt forensics.
 - [ExAutoresearch](https://github.com/chgeuer/ex_autoresearch) - Elixir autoresearch framework: hot-loads one experiment module at a time, trains GPT variants under fixed budgets across distributed GPU nodes, and uses a referee plus dashboard to early-stop losers and persist the best surviving trials.
 - [slowresearch](https://github.com/artkulak/slowresearch) - Delayed-feedback experiment skill: adapts autoresearch to content, outreach, pricing, and other publish-and-wait workflows by logging human-reported metrics and proposing the next hypothesis across long feedback cycles.
+- [AutoAgent](https://github.com/kevinrgu/autoagent) - Agent-engineering infrastructure: applies Karpathy's autoresearch to a single-file Harbor agent harness, rewriting `agent.py`, benchmarking scored tasks, and keeping only prompt, tool, or orchestration changes that raise total score.
 
 ### Related Practices / Discussions
 
@@ -252,6 +254,10 @@ Source file: [`categories/related-practices-discussions.md`](categories/related-
 ### Business / GTM workflows
 
 - [Brandon Pizzacalla on applying Karpathy's autoresearch pattern to cold email](https://x.com/bpizzacalla/status/2039233818994102609) - X: describes a single-agent loop that tests cold-email variants on live reply-rate metrics, commits winners as the new baseline, and stops at convergence.
+
+### Workflow automation / consumer ops
+
+- [agrim singh on applying autoresearch to business-class fare search](https://x.com/agrimsingh/status/2041916589906464820) - X: describes an `autofare` loop that proposed 52 alternate routings and date shifts, validated visa and layover rules from YAML, and kept only cheaper legal itineraries, cutting one quoted business-class trip from $4,716 to $2,424 in 16 iterations.
 
 ### Prompt / evaluation
 
