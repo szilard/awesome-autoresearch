@@ -43,11 +43,11 @@ We do **not** include:
 
 - [Scientific Research](categories/scientific-research.md) — 24 entries
 - [Software / Systems Optimization](categories/software-systems-optimization.md) — 31 entries
-- [Evaluation / Red Teaming](categories/evaluation-red-teaming.md) — 9 entries
+- [Evaluation / Red Teaming](categories/evaluation-red-teaming.md) — 10 entries
 - [Finance / Trading](categories/finance-trading.md) — 12 entries
 - [Personal Knowledge / Humanities](categories/personal-knowledge-humanities.md) — 1 entry
 - [Infra / Skills / Forks](categories/infra-skills-forks.md) — 42 entries
-- [Related Practices / Discussions](categories/related-practices-discussions.md) — 49 entries
+- [Related Practices / Discussions](categories/related-practices-discussions.md) — 48 entries
 
 ### Secondary overlap categories
 
@@ -158,6 +158,7 @@ Source file: [`categories/evaluation-red-teaming.md`](categories/evaluation-red-
 - [Autoresearch for Agents from Scratch](https://github.com/rungalileo/autoresearch-for-agents) - Support-agent prompt evaluation: applies Karpathy's keep/revert loop to `system_prompt.md`, scoring frozen adversarial support cases by tool-call accuracy and lifting the prompt from 0.05 to 0.80 over 15 experiments.
 - [LLM Privacy + Cost Router — Classifier Experiment](https://github.com/clawdbotags/llm-privacy-classifier) - Privacy classification evaluation: runs a Karpathy-style autoresearch experiment across regex and prompt variants for a hybrid LLM privacy classifier, validating the best configuration at 96.7% holdout accuracy with 4.6% false negatives.
 - [AutoMemory](https://github.com/Shelter41/automemory) - Agent memory evaluation: lets an agent rewrite its own memory system against LongMemEval, using an immutable evaluator over random question samples and iterating on code plus strategy notes in response to scored failures.
+- [How to stop your autoresearch loop from cheating](https://www.cerebras.ai/blog/how-to-stop-your-autoresearch-loop-from-cheating) - Autoresearch evaluation hardening: reports 71 experiments across nanochat training and MoE compression, showing loops drift quickly unless experiments are isolated and evaluator gates block shortcut gains.
 
 ### Finance / Trading
 
@@ -247,7 +248,6 @@ Source file: [`categories/related-practices-discussions.md`](categories/related-
 ### Prompt / evaluation
 
 - [Aakash Gupta on eval design as the make-or-break constraint in autoresearch](https://x.com/aakashgupta/status/2039204610569544027) - X: argues that autoresearch only transfers cleanly when the evaluator is binary, locked, compact, and specific enough to resist gaming.
-- [How to stop your autoresearch loop from cheating](https://www.cerebras.ai/blog/how-to-stop-your-autoresearch-loop-from-cheating) - Blog: reports 71 autoresearch experiments across training optimization and model compression, showing loops drift within hours unless evaluation is strict, experiments are isolated, and metrics block shortcut gains.
 - [野口寛士 on nightly autoresearch-style improvement runs on a Mac mini](https://x.com/kan_guchi/status/2042052394130063742) - X: says his team lets a Mac mini run overnight improvement experiments, accepted 20 automatic wins in one night, and found success-metric definition matters more than experiment volume.
 - [Ali Amiri on matching Claude Code quality by optimizing prompts with AutoResearch](https://x.com/iampatten/status/2038755598981038193) - X: describes using AutoResearch to tune prompts and push a Qwen-based workflow from weak to strong performance on a large-repo task.
 - [Clement Hoang on Headway using autoresearch for mental-health-agent prompts](https://x.com/im_clemmy/status/2043126515605622960) - X: reports that Headway used Karpathy's autoresearch to run about 80 generate → evaluate → analyze → mutate iterations on mental-health-agent prompts and reach 99% accuracy against a 95% target.
