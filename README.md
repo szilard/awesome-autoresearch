@@ -46,8 +46,8 @@ We do **not** include:
 - [Evaluation / Red Teaming](categories/evaluation-red-teaming.md) — 10 entries
 - [Finance / Trading](categories/finance-trading.md) — 14 entries
 - [Personal Knowledge / Humanities](categories/personal-knowledge-humanities.md) — 1 entry
-- [Infra / Skills / Forks](categories/infra-skills-forks.md) — 42 entries
-- [Related Practices / Discussions](categories/related-practices-discussions.md) — 49 entries
+- [Infra / Skills / Forks](categories/infra-skills-forks.md) — 45 entries
+- [Related Practices / Discussions](categories/related-practices-discussions.md) — 51 entries
 
 ### Secondary overlap categories
 
@@ -231,6 +231,9 @@ Source file: [`categories/infra-skills-forks.md`](categories/infra-skills-forks.
 - [ResearcherSkill](https://github.com/krzysztofdudek/ResearcherSkill) - Claude Code and Codex skill: generalizes autoresearch into git-backed `.lab/` sessions with branching experiment trees, convergence detection, and commit/revert control, improving Yggdrasil agent rules from 1.82 to 7.04 in a published loop.
 - [Litmus](https://github.com/Kuberwastaken/litmus) - Parallel ML research infrastructure: turns OpenClaw into a multi-agent autoresearch lab with branch-isolated workers, scheduled director and synthesizer roles, and keep/revert experiment commits plus shared discoveries and skills.
 - [Autoresearch CLI](https://github.com/199-biotechnologies/autoresearch-cli) - Cross-agent experiment infrastructure: packages Karpathy's one-file, one-metric keep/revert loop as a Rust CLI that scaffolds configs, validates eval commands, records JSONL results, and installs slash-command skills into multiple coding agents.
+- [codex-autoresearcher](https://github.com/aelaguiz/codex-autoresearcher) - Codex experiment infrastructure: runs optimization campaigns through separate worker and judge Codex processes, a static `evaluate.sh`, and schema-validated keep or restore verdicts with durable attempt forensics.
+- [ExAutoresearch](https://github.com/chgeuer/ex_autoresearch) - Elixir autoresearch framework: hot-loads one experiment module at a time, trains GPT variants under fixed budgets across distributed GPU nodes, and uses a referee plus dashboard to early-stop losers and persist the best surviving trials.
+- [slowresearch](https://github.com/artkulak/slowresearch) - Delayed-feedback experiment skill: adapts autoresearch to content, outreach, pricing, and other publish-and-wait workflows by logging human-reported metrics and proposing the next hypothesis across long feedback cycles.
 
 ### Related Practices / Discussions
 
@@ -278,6 +281,7 @@ Source file: [`categories/related-practices-discussions.md`](categories/related-
 - [Google hit: “I used Karpathy's autoresearch pattern on product workflows”](https://www.reddit.com/r/ClaudeCode/comments/1s2e8ny/i_used_karpathys_autoresearch_pattern_on_product/) - Reddit: discussion thread suggesting the autoresearch loop is being adapted into broader product and self-improving agent workflows.
 - [Google hit: “Autoresearch with Claude on a real codebase (not ML training)”](https://www.reddit.com/r/BlackboxAI_/comments/1s2qs1i/autoresearch_with_claude_on_a_real_codebase_not/) - Reddit: discussion thread emphasizing high failure rates and many discarded experiments as normal when autoresearch is applied to real production codebases.
 - [Google hit: “I adapted Karpathy's autoresearch to build an auto-improvement loop for agentic coding skills”](https://www.reddit.com/r/ClaudeAI/comments/1s3feaa/i_adapted_karpathys_autoresearch_to_build_an/) - Reddit: discussion thread about applying the autoresearch loop to iterative improvement of coding-agent skills.
+- [AutoResearch for Codex](https://www.reddit.com/r/codex/comments/1s3jdfb/autoresearch_for_codex/) - Reddit: presents a Codex SDK optimizer that fans out candidate branches, benchmarks them under correctness tests, clones survivors, and reports about 33% inference gains plus 16× algorithm speedups.
 - [vdaubry on generalizing autoresearch beyond codebases](https://x.com/vdaubry/status/2033530230011216065) - X: argues that the core autoresearch pattern can generalize from code optimization to load testing, landing page A/B tests, and infrastructure tuning when the benchmark is clear.
 - [Alex C. on turning autoresearch into a bounded debugging loop skill](https://x.com/alexcovo_eth/status/2030899247470567534) - X: describes deriving a bounded-experiment-loop skill from autoresearch and using it to improve agent debugging and code fixing.
 - [kavindpadi on using pi-autoresearch for SQL optimization](https://x.com/kavindpadi/status/2041727544530235899) - X: describes trying pi-autoresearch on intentionally inefficient BigQuery SQL and suggests the same metric-driven loop can target top-cost warehouse queries under platform-specific pricing constraints.
@@ -291,6 +295,7 @@ Source file: [`categories/related-practices-discussions.md`](categories/related-
 - [Darian Parrish on smaller autoresearch loops for non-coding tasks](https://x.com/darian_parrish/status/2038739302826529028) - X: mentions adapting the autoresearch pattern beyond coding into other task types.
 - [Ilya on adapting autoresearch to energy-demand peak prediction](https://x.com/ilyaXindy/status/2038604642121093474) - X: describes packaging a custom scorer and composite metric so Claude Code could autoresearch seasonal calibrations and threshold interactions for energy demand prediction.
 - [Google hit: “I built an autonomous ML agent that runs experiments on tabular data indefinitely”](https://www.reddit.com/r/MachineLearning/comments/1s73gma/p_i_built_an_autonomous_ml_agent_that_runs/) - Reddit: discussion thread describing a Claude Code setup that applies autoresearch loops to churn and conversion tabular tasks by iterating on features, models, and hyperparameters until gains plateau.
+- [Gemma 4 Uncensored (autoresearch results)](https://www.reddit.com/r/LocalLLaMA/comments/1sd8c59/gemma_4_uncensored_autoresearch_results/) - Reddit: describes an automated research loop that ran 22 Gemma 4 uncensoring experiments, fixed false-positive refusal markers, and escalated from dense-only abliteration to expert-granular MoE edits when results stalled.
 - [Dan Woods on using autoresearch plus Apple's "LLM in a Flash" to run Qwen3.5-397B locally](https://x.com/danveloper/status/2033940227736100873) - X: says Claude Code used Karpathy's autoresearch setup plus Apple's "LLM in a Flash" paper to get Qwen3.5-397B running on a 48 GB M3 Max MacBook.
 - [Joe Harris on building the same autoresearch idea for robotics teams](https://x.com/_joe_harris_/status/2030803838501073026) - X: claims his team built an analogous loop for robotics teams to automate experiment plumbing, debugging, and iteration around harder physical-world workflows.
 - [David Gasquez on using the autoresearch idea in ML competitions](https://x.com/davidgasquez/status/2030946939836022886) - X: says the benchmark-driven autoresearch pattern worked in a couple of ML competition settings and generalizes to scored tasks like retrieval, AUC, and performance tuning.
