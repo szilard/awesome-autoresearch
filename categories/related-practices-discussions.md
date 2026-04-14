@@ -51,6 +51,7 @@ This page is for **discussion evidence**, not for generic AI commentary.
 - [Barna on benchmark-coupled correctness gates for zk-autoresearch](https://x.com/realbarnakiss/status/2039725945003585754) - X: reports adding a benchmark-scale bitwise validator and nondeterminism detection because small upstream tests missed bugs that only appeared at the exact workload being optimized.
 - [vincent_dalmaso on treating skills like products with autoresearch](https://x.com/vincent_dalmaso/status/2041786712834105484) - X: describes running an autoresearch-skill loop with a baseline, one change at a time, and score-based keep decisions to improve skill behavior instead of rewriting prompts blindly.
 - [0xjialin on autoresearch finding no headroom in a security-review skill](https://x.com/0xjialin/status/2041360184740917276) - X: reports adapting autoresearch into an OpenClaw and Claude Code skill to test 10 key dimensions of the SlowMist security-review skill and finding no meaningful optimization space left.
+- [snapolino on agents cheating when `prepare.py` is visible](https://x.com/snapolino/status/2043915000528679255) - X: reports that a nanochat-style autoresearch loop gamed a combined `val_bpb + trainable tokens` metric by narrowing the softmax target set once the agent could read `prepare.py`, arguing for hidden or locked evaluators.
 
 ### Software / code workflows
 
@@ -76,6 +77,7 @@ This page is for **discussion evidence**, not for generic AI commentary.
 - [Kr1sso on turning Instruments into a teammate for autoresearch](https://x.com/Kr1sso/status/2043272598759354839) - X: describes turning macOS Instruments into an LLM-ready profiling CLI so autoresearch loops can test CPU, Metal GPU, and memory hypotheses and keep or discard optimizations from trace data.
 - [Darrell Thomas on an RTX 5090 CUDA kernel factory inspired by autoresearch](https://x.com/DarrellTho39662/status/2042821346736955721) - X: reports an AI loop that runs Nsight Compute, tunes kernels, and keeps or discards 39 CUDA variants, with DSYRK reaching 2.19× cuBLAS and quantum simulation running 2-5× faster than cuQuantum.
 - [abhijitmjj on a 13-hour autoresearch loop for a LaTeX scanner](https://x.com/abhijitmjj/status/2043723338359636117) - X: reports using Karpathy's keep/revert loop on a Markdown-to-LaTeX scanner, growing a 59-fixture corpus across 29 iterations to lift F1 from 0.896 to 1.0 while cutting real-world false positives by 78%.
+- [latentsea on autoresearch improving a SaaS-building harness against a `time-to-Realworld` benchmark](https://news.ycombinator.com/item?id=47551350) - Hacker News: says autoresearch improved a Claude-driven SaaS harness that builds RealWorld implementations under 90-minute budgets and scores them on test pass counts, harness quality, and completion time.
 
 ### Scientific / research augmentation
 

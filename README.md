@@ -41,13 +41,13 @@ We do **not** include:
 
 ### Primary categories
 
-- [Scientific Research](categories/scientific-research.md) — 24 entries
-- [Software / Systems Optimization](categories/software-systems-optimization.md) — 33 entries
+- [Scientific Research](categories/scientific-research.md) — 25 entries
+- [Software / Systems Optimization](categories/software-systems-optimization.md) — 35 entries
 - [Evaluation / Red Teaming](categories/evaluation-red-teaming.md) — 11 entries
 - [Finance / Trading](categories/finance-trading.md) — 15 entries
 - [Personal Knowledge / Humanities](categories/personal-knowledge-humanities.md) — 2 entries
 - [Infra / Skills / Forks](categories/infra-skills-forks.md) — 48 entries
-- [Related Practices / Discussions](categories/related-practices-discussions.md) — 56 entries
+- [Related Practices / Discussions](categories/related-practices-discussions.md) — 58 entries
 
 ### Secondary overlap categories
 
@@ -108,6 +108,7 @@ Source file: [`categories/scientific-research.md`](categories/scientific-researc
 - [autoresearch-quantum](https://github.com/saymrwulf/autoresearch-quantum) - Quantum research: runs incumbent/challenger autoresearch ratchets for encoded magic-state experiments, screens candidates on cheap noisy simulations, and promotes only justified challengers to expensive backends while logging transferable lessons.
 - [kaggle-autoresearch](https://github.com/aplassard/kaggle-autoresearch) - Tabular ML research: adapts Karpathy-style autoresearch to Kaggle competitions such as Titanic, House Prices, and Store Sales by iterating on feature and model code, logging approved baselines, and accepting only cross-validation improvements over fixed thresholds.
 - [MiniMax M2.7: Early Echoes of Self-Evolution](https://www.minimax.io/news/minimax-m27-en) - AI-lab research: describes an internal research agent that automates 30%-50% of RL workflow and a 100+ round keep/revert scaffold-optimization loop that improved internal evaluation scores by 30%.
+- [autoresearch-macro](https://github.com/wegard/autoresearch-macro) - Macroeconomic forecasting research: runs LLM-guided outer-loop search over Chronos-2 covariates, transforms, and fine-tuning settings, keeping only validation-era forecast improvements across pseudo-real-time Norway, Canada, and Sweden benchmarks.
 
 ### Software / Systems Optimization
 
@@ -146,6 +147,8 @@ Source file: [`categories/software-systems-optimization.md`](categories/software
 - [claude-code-bench](https://github.com/sawzhang/claude-code-bench) - AI coding workflow optimization: applies Karpathy-style autoresearch to Claude Code's 7-dimensional configuration space, running benchmark tasks and keeping only profiles that improve quality-adjusted scores for research depth, correctness, and convention adherence.
 - [autooptimization](https://github.com/damahua/autooptimization) - Systems optimization: applies a profile-first autoresearch protocol to codebases like ClickHouse, Chroma, DataFusion, and RocksDB, keeping only statistically benchmarked optimizations backed by stack-level profiling evidence.
 - [helix-inference-opt](https://github.com/VectorInstitute/helix-inference-opt) - LLM inference optimization: applies a fixed 1-minute autoresearch benchmark to Qwen2.5-0.5B decoding on WikiText-2, rewriting only `infer.py` and keeping throughput gains only when bits-per-byte quality stays within a 1% guard.
+- [autoresearch-inference-optimization](https://github.com/lawjarp-simplismart/autoresearch-inference-optimization) - Inference serving optimization: lets an agent rewrite `serve.sh` plus `experiment.yaml`, benchmark OpenAI-compatible servers under throughput, latency, and memory constraints, and keep only higher-scoring serving configs in `experiments.jsonl`.
+- [PolyTrader](https://github.com/dougsls/polytrader) - Trading-system performance optimization: applies autoresearch to PolyTrader's signal-detection hot path, keeping only test-clean code changes that cut end-to-end tracker latency from 25.7 ms to 0.46 ms across a published 10-iteration benchmark run.
 
 ### Evaluation / Red Teaming
 
@@ -278,6 +281,7 @@ Source file: [`categories/related-practices-discussions.md`](categories/related-
 - [Barna on benchmark-coupled correctness gates for zk-autoresearch](https://x.com/realbarnakiss/status/2039725945003585754) - X: reports adding a benchmark-scale bitwise validator and nondeterminism detection because small upstream tests missed bugs that only appeared at the exact workload being optimized.
 - [vincent_dalmaso on treating skills like products with autoresearch](https://x.com/vincent_dalmaso/status/2041786712834105484) - X: describes running an autoresearch-skill loop with a baseline, one change at a time, and score-based keep decisions to improve skill behavior instead of rewriting prompts blindly.
 - [0xjialin on autoresearch finding no headroom in a security-review skill](https://x.com/0xjialin/status/2041360184740917276) - X: reports adapting autoresearch into an OpenClaw and Claude Code skill to test 10 key dimensions of the SlowMist security-review skill and finding no meaningful optimization space left.
+- [snapolino on agents cheating when `prepare.py` is visible](https://x.com/snapolino/status/2043915000528679255) - X: reports that a nanochat-style autoresearch loop gamed a combined `val_bpb + trainable tokens` metric by narrowing the softmax target set once the agent could read `prepare.py`, arguing for hidden or locked evaluators.
 
 ### Software / code workflows
 
@@ -303,6 +307,7 @@ Source file: [`categories/related-practices-discussions.md`](categories/related-
 - [Kr1sso on turning Instruments into a teammate for autoresearch](https://x.com/Kr1sso/status/2043272598759354839) - X: describes turning macOS Instruments into an LLM-ready profiling CLI so autoresearch loops can test CPU, Metal GPU, and memory hypotheses and keep or discard optimizations from trace data.
 - [Darrell Thomas on an RTX 5090 CUDA kernel factory inspired by autoresearch](https://x.com/DarrellTho39662/status/2042821346736955721) - X: reports an AI loop that runs Nsight Compute, tunes kernels, and keeps or discards 39 CUDA variants, with DSYRK reaching 2.19× cuBLAS and quantum simulation running 2-5× faster than cuQuantum.
 - [abhijitmjj on a 13-hour autoresearch loop for a LaTeX scanner](https://x.com/abhijitmjj/status/2043723338359636117) - X: reports using Karpathy's keep/revert loop on a Markdown-to-LaTeX scanner, growing a 59-fixture corpus across 29 iterations to lift F1 from 0.896 to 1.0 while cutting real-world false positives by 78%.
+- [latentsea on autoresearch improving a SaaS-building harness against a `time-to-Realworld` benchmark](https://news.ycombinator.com/item?id=47551350) - Hacker News: says autoresearch improved a Claude-driven SaaS harness that builds RealWorld implementations under 90-minute budgets and scores them on test pass counts, harness quality, and completion time.
 
 ### Scientific / research augmentation
 
