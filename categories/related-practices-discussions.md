@@ -91,6 +91,7 @@ This page is for **discussion evidence**, not for generic AI commentary.
 - [Dan Woods on using autoresearch plus Apple's "LLM in a Flash" to run Qwen3.5-397B locally](https://x.com/danveloper/status/2033940227736100873) - X: says Claude Code used Karpathy's autoresearch setup plus Apple's "LLM in a Flash" paper to get Qwen3.5-397B running on a 48 GB M3 Max MacBook.
 - [Joe Harris on building the same autoresearch idea for robotics teams](https://x.com/_joe_harris_/status/2030803838501073026) - X: claims his team built an analogous loop for robotics teams to automate experiment plumbing, debugging, and iteration around harder physical-world workflows.
 - [David Gasquez on using the autoresearch idea in ML competitions](https://x.com/davidgasquez/status/2030946939836022886) - X: says the benchmark-driven autoresearch pattern worked in a couple of ML competition settings and generalizes to scored tasks like retrieval, AUC, and performance tuning.
+- [Dylan Huang on a 108-experiment autoresearch run for golf forecasting](https://x.com/dphuang2/status/2043899379040563378) - X: reports letting Claude Code run 108 no-human-loop experiments on Tinker to build a golf forecasting system, cutting held-out tournament log-loss from 2.81 to 0.54 while reverting 52% of trials.
 
 ### Infra / benchmarking ideas
 

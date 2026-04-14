@@ -41,13 +41,13 @@ We do **not** include:
 
 ### Primary categories
 
-- [Scientific Research](categories/scientific-research.md) — 25 entries
+- [Scientific Research](categories/scientific-research.md) — 27 entries
 - [Software / Systems Optimization](categories/software-systems-optimization.md) — 36 entries
 - [Evaluation / Red Teaming](categories/evaluation-red-teaming.md) — 11 entries
 - [Finance / Trading](categories/finance-trading.md) — 15 entries
 - [Personal Knowledge / Humanities](categories/personal-knowledge-humanities.md) — 2 entries
 - [Infra / Skills / Forks](categories/infra-skills-forks.md) — 49 entries
-- [Related Practices / Discussions](categories/related-practices-discussions.md) — 59 entries
+- [Related Practices / Discussions](categories/related-practices-discussions.md) — 60 entries
 
 ### Secondary overlap categories
 
@@ -109,6 +109,8 @@ Source file: [`categories/scientific-research.md`](categories/scientific-researc
 - [kaggle-autoresearch](https://github.com/aplassard/kaggle-autoresearch) - Tabular ML research: adapts Karpathy-style autoresearch to Kaggle competitions such as Titanic, House Prices, and Store Sales by iterating on feature and model code, logging approved baselines, and accepting only cross-validation improvements over fixed thresholds.
 - [MiniMax M2.7: Early Echoes of Self-Evolution](https://www.minimax.io/news/minimax-m27-en) - AI-lab research: describes an internal research agent that automates 30%-50% of RL workflow and a 100+ round keep/revert scaffold-optimization loop that improved internal evaluation scores by 30%.
 - [autoresearch-macro](https://github.com/wegard/autoresearch-macro) - Macroeconomic forecasting research: runs LLM-guided outer-loop search over Chronos-2 covariates, transforms, and fine-tuning settings, keeping only validation-era forecast improvements across pseudo-real-time Norway, Canada, and Sweden benchmarks.
+- [autoresearch-dqn](https://github.com/raphaelschwinger/autoresearch-dqn) - RL algorithm research: applies the autoresearch loop to a CartPole training script, logging 39 iterations that replaced an unstable DQN baseline with a REINFORCE agent that reaches reward 500 in about 5 seconds instead of about 3 minutes.
+- [AutoMedal](https://github.com/Flameingmoy/automedal) - Kaggle competition research: adapts Karpathy's keep/revert loop into strategist, researcher, and experimenter phases, journaling 24 tabular-competition experiments and keeping only lower `val_loss` changes on a fixed leaderboard-oriented harness.
 
 ### Software / Systems Optimization
 
@@ -323,6 +325,7 @@ Source file: [`categories/related-practices-discussions.md`](categories/related-
 - [Dan Woods on using autoresearch plus Apple's "LLM in a Flash" to run Qwen3.5-397B locally](https://x.com/danveloper/status/2033940227736100873) - X: says Claude Code used Karpathy's autoresearch setup plus Apple's "LLM in a Flash" paper to get Qwen3.5-397B running on a 48 GB M3 Max MacBook.
 - [Joe Harris on building the same autoresearch idea for robotics teams](https://x.com/_joe_harris_/status/2030803838501073026) - X: claims his team built an analogous loop for robotics teams to automate experiment plumbing, debugging, and iteration around harder physical-world workflows.
 - [David Gasquez on using the autoresearch idea in ML competitions](https://x.com/davidgasquez/status/2030946939836022886) - X: says the benchmark-driven autoresearch pattern worked in a couple of ML competition settings and generalizes to scored tasks like retrieval, AUC, and performance tuning.
+- [Dylan Huang on a 108-experiment autoresearch run for golf forecasting](https://x.com/dphuang2/status/2043899379040563378) - X: reports letting Claude Code run 108 no-human-loop experiments on Tinker to build a golf forecasting system, cutting held-out tournament log-loss from 2.81 to 0.54 while reverting 52% of trials.
 
 ### Infra / benchmarking ideas
 
