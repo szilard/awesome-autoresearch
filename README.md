@@ -42,12 +42,12 @@ We do **not** include:
 ### Primary categories
 
 - [Scientific Research](categories/scientific-research.md) — 24 entries
-- [Software / Systems Optimization](categories/software-systems-optimization.md) — 32 entries
+- [Software / Systems Optimization](categories/software-systems-optimization.md) — 33 entries
 - [Evaluation / Red Teaming](categories/evaluation-red-teaming.md) — 11 entries
 - [Finance / Trading](categories/finance-trading.md) — 15 entries
 - [Personal Knowledge / Humanities](categories/personal-knowledge-humanities.md) — 2 entries
-- [Infra / Skills / Forks](categories/infra-skills-forks.md) — 46 entries
-- [Related Practices / Discussions](categories/related-practices-discussions.md) — 54 entries
+- [Infra / Skills / Forks](categories/infra-skills-forks.md) — 48 entries
+- [Related Practices / Discussions](categories/related-practices-discussions.md) — 56 entries
 
 ### Secondary overlap categories
 
@@ -145,6 +145,7 @@ Source file: [`categories/software-systems-optimization.md`](categories/software
 - [HashSmith, Part 3: I Automated My Way to a 27% Faster Hash Table](https://bluuewhale.github.io/posts/i-automated-my-way-to-a-27-percent-faster-hash-table/) - Data-structure performance optimization: uses a Claude Code auto-optimize loop to profile, benchmark, and keep only wins on a JVM SwissTable implementation, landing three accepted changes and 13%-32% gains across eight benchmark scenarios.
 - [claude-code-bench](https://github.com/sawzhang/claude-code-bench) - AI coding workflow optimization: applies Karpathy-style autoresearch to Claude Code's 7-dimensional configuration space, running benchmark tasks and keeping only profiles that improve quality-adjusted scores for research depth, correctness, and convention adherence.
 - [autooptimization](https://github.com/damahua/autooptimization) - Systems optimization: applies a profile-first autoresearch protocol to codebases like ClickHouse, Chroma, DataFusion, and RocksDB, keeping only statistically benchmarked optimizations backed by stack-level profiling evidence.
+- [helix-inference-opt](https://github.com/VectorInstitute/helix-inference-opt) - LLM inference optimization: applies a fixed 1-minute autoresearch benchmark to Qwen2.5-0.5B decoding on WikiText-2, rewriting only `infer.py` and keeping throughput gains only when bits-per-byte quality stays within a 1% guard.
 
 ### Evaluation / Red Teaming
 
@@ -239,6 +240,8 @@ Source file: [`categories/infra-skills-forks.md`](categories/infra-skills-forks.
 - [ExAutoresearch](https://github.com/chgeuer/ex_autoresearch) - Elixir autoresearch framework: hot-loads one experiment module at a time, trains GPT variants under fixed budgets across distributed GPU nodes, and uses a referee plus dashboard to early-stop losers and persist the best surviving trials.
 - [slowresearch](https://github.com/artkulak/slowresearch) - Delayed-feedback experiment skill: adapts autoresearch to content, outreach, pricing, and other publish-and-wait workflows by logging human-reported metrics and proposing the next hypothesis across long feedback cycles.
 - [AutoAgent](https://github.com/kevinrgu/autoagent) - Agent-engineering infrastructure: applies Karpathy's autoresearch to a single-file Harbor agent harness, rewriting `agent.py`, benchmarking scored tasks, and keeping only prompt, tool, or orchestration changes that raise total score.
+- [VibeHQ](https://github.com/0x0funky/vibehq-hub) - Multi-agent coordination infrastructure: applies autoresearch to team protocol design by benchmarking agent swarms, analyzing failure logs, rewriting hub code via `/optimize-protocol`, and iterating until coordination flags and token waste fall.
+- [helix](https://github.com/VectorInstitute/helix) - Agent-agnostic autoresearch infrastructure: generalizes Karpathy's loop into reproducible `helix.yaml` + `program.md` repos with backend-swappable agents, append-only `experiments.tsv` ledgers, and independently verifiable example helices.
 
 ### Related Practices / Discussions
 
@@ -251,10 +254,12 @@ Source file: [`categories/related-practices-discussions.md`](categories/related-
 - [alex on verifier-driven autoresearch loops for Amazon seller workflows](https://x.com/nospicyplease_/status/2035682307483259073) - X: argues that verifier-driven autoresearch loops fit PPC, catalog, and ASIN-level decisions better than peer-consensus swarms because proposals are kept only when the evaluator approves them.
 - [Brandon Pizzacalla on agentic paid ads systems based on Karpathy autoresearch](https://x.com/bpizzacalla/status/2038731009051824318) - X: claims to use Karpathy-style autoresearch as the planning and experiment pattern behind autonomous paid-ads workflows.
 - [nlethetech on a NEPSE quant terminal refined through 300+ autoresearch cycles](https://x.com/nlethetech/status/2043522907779862610) - X: says his NEPSE terminal trading workstation backtests strategies with a quant model refined through 300+ autoresearch cycles while combining market data and execution in one interface.
+- [tensorqt on Paradigm's autoresearch hackathon for market making](https://x.com/tensorqt/status/2042880400737931401) - X: describes a Paradigm challenge that treated prediction-market market making as an autoresearch problem and says top teams scaled the search with parallel Claude Code or Codex workers plus internal orchestration.
 
 ### Business / GTM workflows
 
 - [Brandon Pizzacalla on applying Karpathy's autoresearch pattern to cold email](https://x.com/bpizzacalla/status/2039233818994102609) - X: describes a single-agent loop that tests cold-email variants on live reply-rate metrics, commits winners as the new baseline, and stops at convergence.
+- [GoatGaucho on applying Karpathy's autoresearch to TrustLayer trust scoring](https://x.com/Goat_Gaucho/status/2036546607739707879) - X: reports using a mutable scoring config plus verifier on 120 labeled agents to push sybil-risk F1 from 0% to 95.9% in two keep-or-revert experiments before shipping the new thresholds to production.
 
 ### Workflow automation / consumer ops
 
