@@ -42,18 +42,18 @@ We do **not** include:
 ### Primary categories
 
 - [Scientific Research](categories/scientific-research.md) — 28 entries
-- [Software / Systems Optimization](categories/software-systems-optimization.md) — 36 entries
+- [Software / Systems Optimization](categories/software-systems-optimization.md) — 37 entries
 - [Evaluation / Red Teaming](categories/evaluation-red-teaming.md) — 11 entries
 - [Finance / Trading](categories/finance-trading.md) — 15 entries
 - [Personal Knowledge / Humanities](categories/personal-knowledge-humanities.md) — 2 entries
-- [Infra / Skills / Forks](categories/infra-skills-forks.md) — 51 entries
+- [Infra / Skills / Forks](categories/infra-skills-forks.md) — 55 entries
 - [Related Practices / Discussions](categories/related-practices-discussions.md) — 61 entries
 
 ### Secondary overlap categories
 
 - [Knowledge Base / RAG Preparation](categories/knowledge-base-rag-preparation.md) — 3 entries
 - [Market Research](categories/market-research.md) — 1 entry
-- [Workflow Automation](categories/workflow-automation.md) — 6 entries
+- [Workflow Automation](categories/workflow-automation.md) — 7 entries
 
 ### Open categories still being tracked
 
@@ -153,6 +153,7 @@ Source file: [`categories/software-systems-optimization.md`](categories/software
 - [autoresearch-inference-optimization](https://github.com/lawjarp-simplismart/autoresearch-inference-optimization) - Inference serving optimization: lets an agent rewrite `serve.sh` plus `experiment.yaml`, benchmark OpenAI-compatible servers under throughput, latency, and memory constraints, and keep only higher-scoring serving configs in `experiments.jsonl`.
 - [PolyTrader](https://github.com/dougsls/polytrader) - Trading-system performance optimization: applies autoresearch to PolyTrader's signal-detection hot path, keeping only test-clean code changes that cut end-to-end tracker latency from 25.7 ms to 0.46 ms across a published 10-iteration benchmark run.
 - [autoresearch-lora-buzhou](https://github.com/bzjiang401/autoresearch-lora-buzhou) - Local LoRA fine-tuning optimization: adapts autoresearch to user-chosen LoRA training goals by establishing a confirmed baseline, changing one parameter at a time, rerunning >1% wins for confirmation, and promoting only verified `val_loss` improvements to the best checkpoint.
+- [ZeroAPI](https://github.com/dorukardahan/ZeroAPI) - Model-routing optimization: applies an autoresearch loop to OpenClaw routing policy constants by rerunning evals on routing logs, changing one setting at a time, and keeping only traffic-verified improvements.
 
 ### Evaluation / Red Teaming
 
@@ -252,6 +253,10 @@ Source file: [`categories/infra-skills-forks.md`](categories/infra-skills-forks.
 - [Autolab Companion Tools](https://github.com/dean0x/autolab) - Autoresearch companion infrastructure: adds statistical keep/discard verdicts, experiment-history steering, and multi-agent branch competitions to Karpathy's GPT-pretraining loop through the `autojudge`, `autosteer`, and `autoevolve` CLIs.
 - [autoresearch-cpu](https://github.com/efecanbasoz/autoresearch-cpu) - CPU ML fork: ports Karpathy's autoresearch to commodity CPUs by replacing Flash Attention with native SDPA, shrinking defaults for 30-minute local runs, and preserving the same one-file `val_bpb` keep/discard loop without CUDA.
 - [hugoferreira/autoresearch](https://github.com/hugoferreira/autoresearch) - Codebase research framework: generalizes Karpathy's loop into falsifiable hypotheses, isolated experiment worktrees, instrument-backed observations, strict gate review, and reusable lessons for measurable engineering goals.
+- [Autoresearch Lab](https://github.com/nikhaldi/autoresearch-lab) - Black-box experiment infrastructure: wraps any measurable code pipeline in Docker sandboxing, Python eval backends, host-side git commit/revert control, and keep/discard research loops.
+- [evo](https://github.com/evo-hq/evo) - Parallel optimization framework: extends Karpathy-style autoresearch with discovered benchmarks, git-worktree tree search, parallel subagents, and commit-only-if-gate-passing score improvements.
+- [autoresearch-builder](https://github.com/jung-wan-kim/autoresearch-builder) - Claude Code plugin: auto-detects project type, mutates one target file, runs the chosen build, test, or train command, and keeps or discards each experiment based on a parsed scalar metric.
+- [AdaL vs Claude Code: Autoresearch Benchmark](https://github.com/SylphAI-Inc/autoresearch-adal) - Benchmarking research: publishes head-to-head Karpathy-autoresearch runs on A10 and H100 hardware, comparing best `val_bpb`, experiment counts, and kept improvements between AdaL and Claude Code.
 
 ### Related Practices / Discussions
 
@@ -363,6 +368,7 @@ Source file: [`categories/workflow-automation.md`](categories/workflow-automatio
 - [autovoiceevals](https://github.com/ArchishmanSengupta/autovoiceevals) - Voice AI evaluation: attacks voice agents with adversarial callers, proposes prompt changes one at a time, and keeps or reverts them based on eval results.
 - [PM document optimizer](https://github.com/lifang-mban/pm-document-optimizer) - Product workflow automation: applies a Karpathy-style git ratchet to markdown artifacts like PRDs and strategy docs, scoring each draft with programmatic checks and committing only higher-scoring revisions.
 - [Trip Optimizer Pro](https://github.com/michaelpersonal/trip-optimizer) - Travel planning workflow automation: applies the autoresearch pattern to itinerary generation by researching destinations, scoring multi-day plans, and keeping only itinerary mutations that improve a weighted travel-quality score.
+- [Autoresearch for Software Development](https://github.com/smallnest/autoresearch) - Software delivery automation: adapts autoresearch to GitHub Issues by rotating agents through implement → review → fix loops, then auto-merging only issues that clear a score gate plus build, lint, and test checks.
 
 ## Submission format
 
